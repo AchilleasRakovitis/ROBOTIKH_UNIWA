@@ -1,0 +1,633 @@
+function scarafk(ORBITS)
+%DRAW FUNCTION
+%Inputs: ORBITS[Q1_T,Q2_T,Q3_T,Q4_T]
+
+global GRASP
+global NEAREST_OBJ
+global CURRENT_Q
+global ORBITS
+global GRID_TOOL %Πλέγμα αρπάγης
+global GRID_Z %Πλέγμα αρπάγης Z-axis
+john=0.1%0.075
+init_globals % Αρχικοποίηση global μεταβλητών
+
+d=CURRENT_Q(1)+CURRENT_Q(2)+CURRENT_Q(4);
+
+if GRASP == 1 %Η διαφορά του προσανατολισμού του κάθε αντικειμένου, με αυτόν της αρπάγης
+    diaf_red=qr1_rad-d*pi/180;
+    diaf_green=qg1_rad-d*pi/180;
+    diaf_blue=qb1_rad-d*pi/180;
+    diaf_white=qw1_rad-d*pi/180;
+    diaf_plate=pl1_rad-d*pi/180;
+    diaf_cy1=cy1_rad-d*pi/180;
+    diaf_cb1=cb1_rad-d*pi/180;
+    diaf_cg1=cg1_rad-d*pi/180;
+    diaf_cr1=cr1_rad-d*pi/180;
+    diaf_cy2=cy2_rad-d*pi/180;
+    diaf_cb2=cb2_rad-d*pi/180;
+    diaf_cg2=cg2_rad-d*pi/180;
+    diaf_cr2=cr2_rad-d*pi/180;
+    
+    diaf_b01=b01_rad-d*pi/180;
+    diaf_b02=b02_rad-d*pi/180;
+    diaf_b03=b03_rad-d*pi/180;
+    diaf_b04=b04_rad-d*pi/180;
+    diaf_b05=b05_rad-d*pi/180;
+    diaf_b06=b06_rad-d*pi/180;
+    diaf_b07=b07_rad-d*pi/180;
+    diaf_b08=b08_rad-d*pi/180;
+    diaf_b09=b09_rad-d*pi/180;
+    diaf_b10=b10_rad-d*pi/180;
+    diaf_b11=b11_rad-d*pi/180;
+    diaf_b12=b12_rad-d*pi/180;
+    
+    diaf_s01=s01_rad-d*pi/180;
+    diaf_s02=s02_rad-d*pi/180;
+    diaf_s03=s03_rad-d*pi/180;
+    diaf_s04=s04_rad-d*pi/180;
+    diaf_s05=s05_rad-d*pi/180;
+    diaf_s06=s06_rad-d*pi/180;
+    diaf_s07=s07_rad-d*pi/180;
+    diaf_s08=s08_rad-d*pi/180;
+    diaf_s09=s09_rad-d*pi/180;
+    diaf_s10=s10_rad-d*pi/180;
+    diaf_s11=s11_rad-d*pi/180;
+    diaf_s12=s12_rad-d*pi/180;
+    diaf_s13=s13_rad-d*pi/180;
+    diaf_s14=s14_rad-d*pi/180;
+    diaf_s15=s15_rad-d*pi/180;
+    diaf_s16=s16_rad-d*pi/180;
+    diaf_s17=s17_rad-d*pi/180;
+    diaf_s18=s18_rad-d*pi/180;
+    diaf_s19=s19_rad-d*pi/180;
+    
+    diaf_A01=A01_rad-d*pi/180;
+    diaf_A02=A02_rad-d*pi/180;
+    diaf_A03=A03_rad-d*pi/180;
+    diaf_A04=A04_rad-d*pi/180;
+    diaf_A05=A05_rad-d*pi/180;
+    diaf_A06=A06_rad-d*pi/180;
+    diaf_A07=A07_rad-d*pi/180;
+end
+
+Q1_T=[ORBITS(:,1),ORBITS(:,2)];%deg
+Q2_T=[ORBITS(:,1),ORBITS(:,3)];
+Q3_T=[ORBITS(:,1),ORBITS(:,4)];
+Q4_T=[ORBITS(:,1),ORBITS(:,5)];
+
+l1=2.25;
+l2=1.25;
+
+q1=Q1_T(:,2)*pi/180; %DEG2RAD
+q2=Q2_T(:,2)*pi/180;
+q3=Q3_T(:,2);
+q4=Q4_T(:,2)*pi/180;
+T=Q1_T(:,1);
+
+h.world = vrworld('scara.wrl');
+open(h.world);
+h.J1=vrnode(h.world,'TJ1');
+h.J2=vrnode(h.world,'TJ2');
+h.J3=vrnode(h.world,'TJ3');
+h.J4=vrnode(h.world,'Tarp');
+
+tic %start timing
+    
+while toc<T(end)
+    a=toc;
+    %-----------------------------------
+    % DRAW code
+    for i=1:length(T)
+        
+        if T(i)>a
+            h.J1.rotation=[0 1 0 q1(i)];
+            h.J2.rotation=[0 1 0 q2(i)];
+            h.J3.translation=[-1.25 q3(i) 0];
+            h.J4.rotation=[0 1 0 q4(i)];
+            CURRENT_Q=[q1(i)*180/pi,q2(i)*180/pi,q3(i),q4(i)*180/pi];
+            g=g0e;
+            
+            info_frames
+
+            gTE=inv(gVT)*gVB*gB0*g;
+            xt=gTE(1,4); %Συντεταγμένες της αρπάγης ως προς το πλαίσιο του τραπεζιού
+            yt=gTE(2,4);
+            zt=gTE(3,4);
+            
+            if GRID_TOOL == 1
+                h.T7.translation=[0 0 0]; %GRID_TOOL
+                h.T8.translation=[-gTE(1,4) 0.01 gTE(2,4)]; %trace
+                h.T16.translation=[0 -200 0]; %thick grid
+            elseif GRID_TOOL == 2
+                h.T7.translation=[0 0 0]; %GRID_TOOL
+                h.T8.translation=[-gTE(1,4) 0.01 gTE(2,4)];
+                h.T16.translation=[0 0 0]; %thick grid
+            else
+                h.T7.translation=[0 -200 0];
+                h.T8.translation=[0 -200 0];
+                h.T16.translation=[0 -200 0];
+            end
+            
+            if GRID_Z == 1
+                h.T20.translation=[-gTE(1,4) gTE(3,4) gTE(2,4)];
+            else
+                h.T20.translation=[0 -200 0];
+            end
+                        
+            if GRASP == 1                
+                
+                f=CURRENT_Q(1)+CURRENT_Q(2)+CURRENT_Q(4);
+                % Nearest object selection                 
+                if NEAREST_OBJ == 1
+                    h.T1.translation=[-gTE(1,4) gTE(3,4)-0.1 gTE(2,4)];
+                    h.T1.rotation=[0 1 0 diaf_red+f*pi/180];
+                    qr1_x=xt;
+                    qr1_y=yt;
+                    qr1_z=zt;
+                elseif NEAREST_OBJ == 2
+                    h.T2.translation=[-gTE(1,4) gTE(3,4)-0.1 gTE(2,4)];
+                    h.T2.rotation=[0 1 0 diaf_green+f*pi/180];
+                    qg1_x=xt;
+                    qg1_y=yt;
+                    qg1_z=zt;
+                elseif NEAREST_OBJ == 3
+                    h.T3.translation=[-gTE(1,4) gTE(3,4)-0.1 gTE(2,4)];
+                    h.T3.rotation=[0 1 0 diaf_blue+f*pi/180];
+                    qb1_x=xt;
+                    qb1_y=yt;
+                    qb1_z=zt;
+                elseif NEAREST_OBJ == 4
+                    h.T4.translation=[-gTE(1,4) gTE(3,4)-0.1 gTE(2,4)];
+                    h.T4.rotation=[0 1 0 diaf_white+f*pi/180];
+                    qw1_x=xt;
+                    qw1_y=yt;
+                    qw1_z=zt;
+                elseif NEAREST_OBJ == 5
+                    h.T5.translation=[-gTE(1,4) gTE(3,4)-0.1 gTE(2,4)];
+                    h.T5.rotation=[0 1 0 diaf_plate+f*pi/180];
+                    pl1_x=xt;
+                    pl1_y=yt;
+                    pl1_z=zt;
+                elseif NEAREST_OBJ == 6
+                    h.T9.translation=[-gTE(1,4)+0.5 gTE(3,4)-0.35 gTE(2,4)-0.5];
+                    h.T9.rotation=[0 1 0 diaf_cy1+f*pi/180];
+                    cy1_x=xt;
+                    cy1_y=yt;
+                    cy1_z=zt;
+                elseif NEAREST_OBJ == 7
+                    h.T11.translation=[-gTE(1,4)+0.5 gTE(3,4)-0.35 gTE(2,4)-0.5];
+                    h.T11.rotation=[0 1 0 diaf_cg1+f*pi/180];
+                    cg1_x=xt;
+                    cg1_y=yt;
+                    cg1_z=zt;
+                elseif NEAREST_OBJ == 8
+                    h.T10.translation=[-gTE(1,4)+0.5 gTE(3,4)-0.35 gTE(2,4)-0.5];
+                    h.T10.rotation=[0 1 0 diaf_cb1+f*pi/180];
+                    cb1_x=xt;
+                    cb1_y=yt;
+                    cb1_z=zt;
+                elseif NEAREST_OBJ == 9
+                    h.T12.translation=[-gTE(1,4)+0.5 gTE(3,4)-0.35 gTE(2,4)-0.5];
+                    h.T12.rotation=[0 1 0 diaf_cr1+f*pi/180];
+                    cr1_x=xt;
+                    cr1_y=yt;
+                    cr1_z=zt; 
+                elseif NEAREST_OBJ == 10 % code for 'tei'
+                    h.B1.translation=[-gTE(1,4) gTE(3,4)+0.075 gTE(2,4)];
+                    h.B1.rotation=[0 1 0 diaf_b01+f*pi/180];
+                    b01_x=xt;
+                    b01_y=yt;
+                    b01_z=zt;
+                elseif NEAREST_OBJ == 11
+                    h.B2.translation=[-gTE(1,4) gTE(3,4)+0.075 gTE(2,4)];
+                    h.B2.rotation=[0 1 0 diaf_b02+f*pi/180];
+                    b02_x=xt;
+                    b02_y=yt;
+                    b02_z=zt;                    
+                elseif NEAREST_OBJ == 12
+                    h.B3.translation=[-gTE(1,4) gTE(3,4)+0.075 gTE(2,4)];
+                    h.B3.rotation=[0 1 0 diaf_b03+f*pi/180];
+                    b03_x=xt;
+                    b03_y=yt;
+                    b03_z=zt;
+                elseif NEAREST_OBJ == 13
+                    h.B4.translation=[-gTE(1,4) gTE(3,4)+0.075 gTE(2,4)];
+                    h.B4.rotation=[0 1 0 diaf_b04+f*pi/180];
+                    b04_x=xt;
+                    b04_y=yt;
+                    b04_z=zt;                    
+                elseif NEAREST_OBJ == 14
+                    h.B5.translation=[-gTE(1,4) gTE(3,4)+0.075 gTE(2,4)];
+                    h.B5.rotation=[0 1 0 diaf_b05+f*pi/180];
+                    b05_x=xt;
+                    b05_y=yt;
+                    b05_z=zt;
+                elseif NEAREST_OBJ == 15
+                    h.B6.translation=[-gTE(1,4) gTE(3,4)+0.075 gTE(2,4)];
+                    h.B6.rotation=[0 1 0 diaf_b06+f*pi/180];
+                    b06_x=xt;
+                    b06_y=yt;
+                    b06_z=zt;                    
+                elseif NEAREST_OBJ == 16
+                    h.B7.translation=[-gTE(1,4) gTE(3,4)+0.075 gTE(2,4)];
+                    h.B7.rotation=[0 1 0 diaf_b07+f*pi/180];
+                    b07_x=xt;
+                    b07_y=yt;
+                    b07_z=zt;
+                elseif NEAREST_OBJ == 17
+                    h.B8.translation=[-gTE(1,4) gTE(3,4)+0.075 gTE(2,4)];
+                    h.B8.rotation=[0 1 0 diaf_b08+f*pi/180];
+                    b08_x=xt;
+                    b08_y=yt;
+                    b08_z=zt;                    
+                elseif NEAREST_OBJ == 18
+                    h.B9.translation=[-gTE(1,4) gTE(3,4)+0.075 gTE(2,4)];
+                    h.B9.rotation=[0 1 0 diaf_b09+f*pi/180];
+                    b09_x=xt;
+                    b09_y=yt;
+                    b09_z=zt;
+                elseif NEAREST_OBJ == 19
+                    h.B10.translation=[-gTE(1,4) gTE(3,4)+0.075 gTE(2,4)];
+                    h.B10.rotation=[0 1 0 diaf_b10+f*pi/180];
+                    b10_x=xt;
+                    b10_y=yt;
+                    b10_z=zt;                    
+                elseif NEAREST_OBJ == 20
+                    h.B11.translation=[-gTE(1,4) gTE(3,4)+0.075 gTE(2,4)];
+                    h.B11.rotation=[0 1 0 diaf_b11+f*pi/180];
+                    b11_x=xt;
+                    b11_y=yt;
+                    b11_z=zt;
+                elseif NEAREST_OBJ == 21
+                    h.B12.translation=[-gTE(1,4) gTE(3,4)+0.075 gTE(2,4)];
+                    h.B12.rotation=[0 1 0 diaf_b12+f*pi/180];
+                    b12_x=xt;
+                    b12_y=yt;
+                    b12_z=zt;                    
+ 
+                elseif NEAREST_OBJ == 22
+                    h.S1.translation=[-gTE(1,4) gTE(3,4)+0.075 gTE(2,4)];
+                    h.S1.rotation=[0 1 0 diaf_s01+f*pi/180];
+                    s01_x=xt;
+                    s01_y=yt;
+                    s01_z=zt;
+                elseif NEAREST_OBJ == 23
+                    h.S2.translation=[-gTE(1,4) gTE(3,4)+0.075 gTE(2,4)];
+                    h.S2.rotation=[0 1 0 diaf_s02+f*pi/180];
+                    s02_x=xt;
+                    s02_y=yt;
+                    s02_z=zt;                    
+                elseif NEAREST_OBJ == 24
+                    h.S3.translation=[-gTE(1,4) gTE(3,4)+0.075 gTE(2,4)];
+                    h.S3.rotation=[0 1 0 diaf_s03+f*pi/180];
+                    s03_x=xt;
+                    s03_y=yt;
+                    s03_z=zt;
+                elseif NEAREST_OBJ == 25
+                    h.S4.translation=[-gTE(1,4) gTE(3,4)+0.075 gTE(2,4)];
+                    h.S4.rotation=[0 1 0 diaf_s04+f*pi/180];
+                    s04_x=xt;
+                    s04_y=yt;
+                    s04_z=zt;                    
+                elseif NEAREST_OBJ == 26
+                    h.S5.translation=[-gTE(1,4) gTE(3,4)+0.075 gTE(2,4)];
+                    h.S5.rotation=[0 1 0 diaf_s05+f*pi/180];
+                    s05_x=xt;
+                    s05_y=yt;
+                    s05_z=zt;
+                elseif NEAREST_OBJ == 27
+                    h.S6.translation=[-gTE(1,4) gTE(3,4)+0.075 gTE(2,4)];
+                    h.S6.rotation=[0 1 0 diaf_s06+f*pi/180];
+                    s06_x=xt;
+                    s06_y=yt;
+                    s06_z=zt;                    
+                elseif NEAREST_OBJ == 28
+                    h.S7.translation=[-gTE(1,4) gTE(3,4)+0.075 gTE(2,4)];
+                    h.S7.rotation=[0 1 0 diaf_s07+f*pi/180];
+                    s07_x=xt;
+                    s07_y=yt;
+                    s07_z=zt;
+                elseif NEAREST_OBJ == 29
+                    h.S8.translation=[-gTE(1,4) gTE(3,4)+0.075 gTE(2,4)];
+                    h.S8.rotation=[0 1 0 diaf_s08+f*pi/180];
+                    s08_x=xt;
+                    s08_y=yt;
+                    s08_z=zt;                    
+                elseif NEAREST_OBJ == 30
+                    h.S9.translation=[-gTE(1,4) gTE(3,4)+0.075 gTE(2,4)];
+                    h.S9.rotation=[0 1 0 diaf_s09+f*pi/180];
+                    s09_x=xt;
+                    s09_y=yt;
+                    s09_z=zt;
+                elseif NEAREST_OBJ == 31
+                    h.S10.translation=[-gTE(1,4) gTE(3,4)+0.075 gTE(2,4)];
+                    h.S10.rotation=[0 1 0 diaf_s10+f*pi/180];
+                    s10_x=xt;
+                    s10_y=yt;
+                    s10_z=zt;                    
+                elseif NEAREST_OBJ == 32
+                    h.S11.translation=[-gTE(1,4) gTE(3,4)+0.075 gTE(2,4)];
+                    h.S11.rotation=[0 1 0 diaf_s11+f*pi/180];
+                    s11_x=xt;
+                    s11_y=yt;
+                    s11_z=zt;
+                elseif NEAREST_OBJ == 33
+                    h.S12.translation=[-gTE(1,4) gTE(3,4)+0.075 gTE(2,4)];
+                    h.S12.rotation=[0 1 0 diaf_s12+f*pi/180];
+                    s12_x=xt;
+                    s12_y=yt;
+                    s12_z=zt;                    
+                elseif NEAREST_OBJ == 34
+                    h.S13.translation=[-gTE(1,4) gTE(3,4)+0.075 gTE(2,4)];
+                    h.S13.rotation=[0 1 0 diaf_s13+f*pi/180];
+                    s13_x=xt;
+                    s13_y=yt;
+                    s13_z=zt;                    
+                elseif NEAREST_OBJ == 35
+                    h.S14.translation=[-gTE(1,4) gTE(3,4)+0.075 gTE(2,4)];
+                    h.S14.rotation=[0 1 0 diaf_s14+f*pi/180];
+                    s14_x=xt;
+                    s14_y=yt;
+                    s14_z=zt;
+                elseif NEAREST_OBJ == 36
+                    h.S15.translation=[-gTE(1,4) gTE(3,4)+0.075 gTE(2,4)];
+                    h.S15.rotation=[0 1 0 diaf_s15+f*pi/180];
+                    s15_x=xt;
+                    s15_y=yt;
+                    s15_z=zt;                    
+                 elseif NEAREST_OBJ == 37
+                    h.S16.translation=[-gTE(1,4) gTE(3,4)+0.075 gTE(2,4)];
+                    h.S16.rotation=[0 1 0 diaf_s16+f*pi/180];
+                    s16_x=xt;
+                    s16_y=yt;
+                    s16_z=zt;                    
+                elseif NEAREST_OBJ == 38
+                    h.S17.translation=[-gTE(1,4) gTE(3,4)+0.075 gTE(2,4)];
+                    h.S17.rotation=[0 1 0 diaf_s17+f*pi/180];
+                    s17_x=xt;
+                    s17_y=yt;
+                    s17_z=zt;                    
+                elseif NEAREST_OBJ == 39
+                    h.S18.translation=[-gTE(1,4) gTE(3,4)+0.075 gTE(2,4)];
+                    h.S18.rotation=[0 1 0 diaf_s18+f*pi/180];
+                    s18_x=xt;
+                    s18_y=yt;
+                    s18_z=zt;
+                elseif NEAREST_OBJ == 40
+                    h.S19.translation=[-gTE(1,4) gTE(3,4)+0.075 gTE(2,4)];
+                    h.S19.rotation=[0 1 0 diaf_s19+f*pi/180];
+                    s19_x=xt;
+                    s19_y=yt;
+                    s19_z=zt;
+                elseif NEAREST_OBJ == 41
+                    h.A01.translation=[-gTE(1,4) gTE(3,4) gTE(2,4)];
+                    h.A01.rotation=[0 1 0 diaf_A01+f*pi/180];
+                    A01_x=xt;
+                    A01_y=yt;
+                    A01_z=zt;
+                elseif NEAREST_OBJ == 42
+                    h.A02.translation=[-gTE(1,4) gTE(3,4) gTE(2,4)];
+                    h.A02.rotation=[0 1 0 diaf_A02+f*pi/180];
+                    A02_x=xt;
+                    A02_y=yt;
+                    A02_z=zt;
+                elseif NEAREST_OBJ == 43
+                    h.A03.translation=[-gTE(1,4) gTE(3,4) gTE(2,4)];
+                    h.A03.rotation=[0 1 0 diaf_A03+f*pi/180];
+                    A03_x=xt;
+                    A03_y=yt;
+                    A03_z=zt;
+                elseif NEAREST_OBJ == 44
+                    h.A04.translation=[-gTE(1,4) gTE(3,4) gTE(2,4)];
+                    h.A04.rotation=[0 1 0 diaf_A04+f*pi/180];
+                    A04_x=xt;
+                    A04_y=yt;
+                    A04_z=zt;
+                elseif NEAREST_OBJ == 45
+                    h.A05.translation=[-gTE(1,4) gTE(3,4) gTE(2,4)];
+                    h.A05.rotation=[0 1 0 diaf_A05+f*pi/180];
+                    A05_x=xt;
+                    A05_y=yt;
+                    A05_z=zt;
+                elseif NEAREST_OBJ == 46
+                    h.A06.translation=[-gTE(1,4) gTE(3,4) gTE(2,4)];
+                    h.A06.rotation=[0 1 0 diaf_A06+f*pi/180];
+                    A06_x=xt;
+                    A06_y=yt;
+                    A06_z=zt;
+                elseif NEAREST_OBJ == 47
+                    h.A07.translation=[-gTE(1,4) gTE(3,4) gTE(2,4)];
+                    h.A07.rotation=[0 1 0 diaf_A07+f*pi/180];
+                    A07_x=xt;
+                    A07_y=yt;
+                    A07_z=zt;
+                elseif NEAREST_OBJ == 48
+                    h.C1.translation=[-gTE(1,4) gTE(3,4)-0.25 gTE(2,4)];
+                    co1_x=xt;
+                    co1_y=yt;
+                    co1_z=zt;
+                elseif NEAREST_OBJ == 49
+                    h.C2.translation=[-gTE(1,4) gTE(3,4)-0.25 gTE(2,4)];
+                    co2_x=xt;
+                    co2_y=yt;
+                    co2_z=zt;
+                elseif NEAREST_OBJ == 50
+                    h.C3.translation=[-gTE(1,4) gTE(3,4)-0.25 gTE(2,4)];
+                    co3_x=xt;
+                    co3_y=yt;
+                    co3_z=zt;
+                elseif NEAREST_OBJ == 51
+                    h.C4.translation=[-gTE(1,4) gTE(3,4)-0.25 gTE(2,4)];
+                    co4_x=xt;
+                    co4_y=yt;
+                    co4_z=zt;
+                elseif NEAREST_OBJ == 52
+                    h.C5.translation=[-gTE(1,4) gTE(3,4)-0.25 gTE(2,4)];
+                    co5_x=xt;
+                    co5_y=yt;
+                    co5_z=zt;
+                elseif NEAREST_OBJ == 53
+                    h.SP1.translation=[-gTE(1,4) gTE(3,4)-0.15 gTE(2,4)];
+                    sp1_x=xt;
+                    sp1_y=yt;
+                    sp1_z=zt;
+                elseif NEAREST_OBJ == 54
+                    h.SP2.translation=[-gTE(1,4) gTE(3,4)-0.15 gTE(2,4)];
+                    sp2_x=xt;
+                    sp2_y=yt;
+                    sp2_z=zt;
+                elseif NEAREST_OBJ == 55
+                    h.SP3.translation=[-gTE(1,4) gTE(3,4)-0.15 gTE(2,4)];
+                    sp3_x=xt;
+                    sp3_y=yt;
+                    sp3_z=zt;
+                elseif NEAREST_OBJ == 56
+                    h.SP4.translation=[-gTE(1,4) gTE(3,4)-0.15 gTE(2,4)];
+                    sp4_x=xt;
+                    sp4_y=yt;
+                    sp4_z=zt;
+                elseif NEAREST_OBJ == 57
+                    h.SP5.translation=[-gTE(1,4) gTE(3,4)-0.15 gTE(2,4)];
+                    sp5_x=xt;
+                    sp5_y=yt;
+                    sp5_z=zt;
+                elseif NEAREST_OBJ == 58
+                    h.T21.translation=[-gTE(1,4) gTE(3,4)-0.25 gTE(2,4)];
+                    h.T21.rotation=[0 1 0 diaf_cy2+f*pi/180];
+                    cy2_x=xt;
+                    cy2_y=yt;
+                    cy2_z=zt;
+                elseif NEAREST_OBJ == 59
+                    h.T22.translation=[-gTE(1,4) gTE(3,4)-0.25 gTE(2,4)];
+                    h.T22.rotation=[0 1 0 diaf_cb2+f*pi/180];
+                    cb2_x=xt;
+                    cb2_y=yt;
+                    cb2_z=zt;
+                elseif NEAREST_OBJ == 60
+                    h.T23.translation=[-gTE(1,4) gTE(3,4)-0.25 gTE(2,4)];
+                    h.T23.rotation=[0 1 0 diaf_cg2+f*pi/180];
+                    cg2_x=xt;
+                    cg2_y=yt;
+                    cg2_z=zt;
+                elseif NEAREST_OBJ == 61
+                    h.T24.translation=[-gTE(1,4) gTE(3,4)-0.25 gTE(2,4)];
+                    h.T24.rotation=[0 1 0 diaf_cr2+f*pi/180];
+                    cr2_x=xt;
+                    cr2_y=yt;
+                    cr2_z=zt;
+                else
+                    error('Error in importing nearest object data, in ''scarafk''!')
+                end %if - Nearest object selection
+                
+                
+            end %if - GRASP
+            %--------------------------------
+            cc1=q1(i);%Μεταβλητές για subplot
+            cc2=q2(i);%Μεταβλητές για subplot
+            cc3=q3(i);%Μεταβλητές για subplot
+            cc4=q4(i);%Μεταβλητές για subplot
+            %--------------------------------
+            break;
+            
+        end % if - T(i)>a
+    %-----------------------------------    
+    end % for
+       
+    pause(0.0001)
+    
+    tmp=size(ORBITS);
+    t=ORBITS(tmp(1),1);
+    
+        vrdrawnow;
+        
+end %end of while
+
+if GRASP == 1 && NEAREST_OBJ == 1
+    qr1_rad=diaf_red+f*pi/180;
+elseif GRASP == 1 && NEAREST_OBJ == 2
+    qg1_rad=diaf_green+f*pi/180;
+elseif GRASP == 1 && NEAREST_OBJ == 3
+    qb1_rad=diaf_blue+f*pi/180;
+elseif GRASP == 1 && NEAREST_OBJ == 4
+    qw1_rad=diaf_white+f*pi/180;
+elseif GRASP == 1 && NEAREST_OBJ == 5
+    pl1_rad=diaf_plate+f*pi/180;    
+elseif GRASP == 1 && NEAREST_OBJ == 6
+    cy1_rad=diaf_cy1+f*pi/180;
+elseif GRASP == 1 && NEAREST_OBJ == 7
+    cg1_rad=diaf_cg1+f*pi/180;
+elseif GRASP == 1 && NEAREST_OBJ == 8
+    cb1_rad=diaf_cb1+f*pi/180;   
+elseif GRASP == 1 && NEAREST_OBJ == 9
+    cr1_rad=diaf_cr1+f*pi/180;
+    
+    %code for 'tei'
+elseif GRASP == 1 && NEAREST_OBJ == 10
+    b01_rad=diaf_b01+f*pi/180;    
+elseif GRASP == 1 && NEAREST_OBJ == 11
+    b02_rad=diaf_b02+f*pi/180;    
+elseif GRASP == 1 && NEAREST_OBJ == 12
+    b03_rad=diaf_b03+f*pi/180;    
+elseif GRASP == 1 && NEAREST_OBJ == 13
+    b04_rad=diaf_b04+f*pi/180;    
+elseif GRASP == 1 && NEAREST_OBJ == 14
+    b05_rad=diaf_b05+f*pi/180;    
+elseif GRASP == 1 && NEAREST_OBJ == 15
+    b06_rad=diaf_b06+f*pi/180;    
+elseif GRASP == 1 && NEAREST_OBJ == 16
+    b07_rad=diaf_b07+f*pi/180;    
+elseif GRASP == 1 && NEAREST_OBJ == 17
+    b08_rad=diaf_b08+f*pi/180;    
+elseif GRASP == 1 && NEAREST_OBJ == 18
+    b09_rad=diaf_b09+f*pi/180;    
+elseif GRASP == 1 && NEAREST_OBJ == 19
+    b10_rad=diaf_b10+f*pi/180;    
+elseif GRASP == 1 && NEAREST_OBJ == 20
+    b11_rad=diaf_b11+f*pi/180;    
+elseif GRASP == 1 && NEAREST_OBJ == 21
+    b12_rad=diaf_b12+f*pi/180;
+
+elseif GRASP == 1 && NEAREST_OBJ == 22
+    s01_rad=diaf_s01+f*pi/180;    
+elseif GRASP == 1 && NEAREST_OBJ == 23
+    s02_rad=diaf_s02+f*pi/180;    
+elseif GRASP == 1 && NEAREST_OBJ == 24
+    s03_rad=diaf_s03+f*pi/180;    
+elseif GRASP == 1 && NEAREST_OBJ == 25
+    s04_rad=diaf_s04+f*pi/180;    
+elseif GRASP == 1 && NEAREST_OBJ == 26
+    s05_rad=diaf_s05+f*pi/180;    
+elseif GRASP == 1 && NEAREST_OBJ == 27
+    s06_rad=diaf_s06+f*pi/180;    
+elseif GRASP == 1 && NEAREST_OBJ == 28
+    s07_rad=diaf_s07+f*pi/180;    
+elseif GRASP == 1 && NEAREST_OBJ == 29
+    s08_rad=diaf_s08+f*pi/180;    
+elseif GRASP == 1 && NEAREST_OBJ == 30
+    s09_rad=diaf_s09+f*pi/180;    
+elseif GRASP == 1 && NEAREST_OBJ == 31
+    s10_rad=diaf_s10+f*pi/180;    
+elseif GRASP == 1 && NEAREST_OBJ == 32
+    s11_rad=diaf_s11+f*pi/180;    
+elseif GRASP == 1 && NEAREST_OBJ == 33
+    s12_rad=diaf_s12+f*pi/180;    
+elseif GRASP == 1 && NEAREST_OBJ == 34
+    s13_rad=diaf_s13+f*pi/180;    
+elseif GRASP == 1 && NEAREST_OBJ == 35
+    s14_rad=diaf_s14+f*pi/180;    
+elseif GRASP == 1 && NEAREST_OBJ == 36
+    s15_rad=diaf_s15+f*pi/180;    
+elseif GRASP == 1 && NEAREST_OBJ == 37
+    s16_rad=diaf_s16+f*pi/180;    
+elseif GRASP == 1 && NEAREST_OBJ == 38
+    s17_rad=diaf_s17+f*pi/180;    
+elseif GRASP == 1 && NEAREST_OBJ == 39
+    s18_rad=diaf_s18+f*pi/180;    
+elseif GRASP == 1 && NEAREST_OBJ == 40
+    s19_rad=diaf_s19+f*pi/180;    
+    
+    %code for 'assemble'
+elseif GRASP == 1 && NEAREST_OBJ == 41
+    A01_rad=diaf_A01+f*pi/180;
+elseif GRASP == 1 && NEAREST_OBJ == 42
+    A02_rad=diaf_A02+f*pi/180;
+elseif GRASP == 1 && NEAREST_OBJ == 43
+    A03_rad=diaf_A03+f*pi/180;
+elseif GRASP == 1 && NEAREST_OBJ == 44
+    A04_rad=diaf_A04+f*pi/180; 
+elseif GRASP == 1 && NEAREST_OBJ == 45
+    A05_rad=diaf_A05+f*pi/180;
+elseif GRASP == 1 && NEAREST_OBJ == 46
+    A06_rad=diaf_A06+f*pi/180;
+elseif GRASP == 1 && NEAREST_OBJ == 47
+    A07_rad=diaf_A07+f*pi/180;
+elseif GRASP == 1 && NEAREST_OBJ == 58
+    cy2_rad=diaf_cy2+f*pi/180;
+elseif GRASP == 1 && NEAREST_OBJ == 59
+    cb2_rad=diaf_cb2+f*pi/180;
+elseif GRASP == 1 && NEAREST_OBJ == 60
+    cg2_rad=diaf_cg2+f*pi/180;
+elseif GRASP == 1 && NEAREST_OBJ == 61
+    cr2_rad=diaf_cr2+f*pi/180;
+end
+%toc  %end timing

@@ -1,0 +1,532 @@
+#VRML V2.0 utf8
+
+#Created with V-Realm Builder v2.0
+#Integrated Data Systems Inc.
+#www.ids-net.com
+
+
+DEF ob1 Transform {
+	translation	0 -200 0
+	children Shape {
+		appearance	Appearance {
+			material	Material {
+				diffuseColor	1 0 0
+			}
+
+		}
+
+		geometry	Box {
+			size	1.5 1.5 1.5
+		}
+
+	}
+}
+DEF ob2 Transform {
+	translation	0 -200 0
+	children Shape {
+		appearance	Appearance {
+			material	Material {
+				diffuseColor	1 0 0
+			}
+
+		}
+
+		geometry	Box {
+			size	1.5 1.5 1.5
+		}
+
+	}
+}
+DEF ob3 Transform {
+	translation	0 -200 0
+	children Shape {
+		appearance	Appearance {
+			material	Material {
+				diffuseColor	1 0 0
+			}
+
+		}
+
+		geometry	Box {
+			size	1.5 1.5 1.5
+		}
+
+	}
+}
+DEF ob4 Transform {
+	translation	0 -200 0
+	children Shape {
+		appearance	Appearance {
+			material	Material {
+				diffuseColor	1 0 0
+			}
+
+		}
+
+		geometry	Box {
+			size	1.5 1.5 1.5
+		}
+
+	}
+}
+DEF ob5 Transform {
+	translation	0 -200 0
+	children Shape {
+		appearance	Appearance {
+			material	Material {
+				diffuseColor	1 0 0
+			}
+
+		}
+
+		geometry	Box {
+			size	1.5 1.5 1.5
+		}
+
+	}
+}
+DEF Viewpoint_far Viewpoint {
+	orientation	0 -1 0  0.00154408
+	position	2 1.5 35
+	description	"Far"
+}
+DEF TBB Transform {
+	translation	0 0 0
+	children [ 
+	    DEF TJoint1 Transform {
+		    translation	0 0 0
+		    children [ 
+			DEF TJoint2 Transform {
+				translation	4 0 0
+				children [ 
+				    DEF TJoint3 Transform {
+					    translation	4 0 0
+					    children [ 
+						DEF Joint3 Transform {
+							translation	-9.53674e-007 1.72853e-006 -5.96046e-008
+							rotation	1 0 0  1.5708
+							scale	1 0.999999 0.999999
+							children [ 
+							    Shape {
+								    appearance	Appearance {
+									    material	Material {
+										    diffuseColor	0.8 0.161384 0.208202
+									    }
+
+								    }
+
+								    geometry	Cylinder {
+									    height	1
+									    radius	0.25
+								    }
+
+							    }
+
+							    DEF Link3 Transform {
+								    translation	2 1.78843e-007 8.16584e-006
+								    rotation	1 0 0  1.5708
+								    children Shape {
+									    appearance	Appearance {
+										    material	Material {
+											    diffuseColor	0.0549024 0.882459 0.9
+										    }
+
+									    }
+
+									    geometry	Box {
+										    size	3.6 0.2 0.6
+									    }
+
+								    }
+							    }
+							]
+						}
+
+						DEF TArp Transform {
+							translation	4 0 0
+							children [ 
+							    DEF R_arp Transform {
+								    translation	0 0 0.25
+								    children Shape {
+									    appearance	Appearance {
+										    material	Material {
+											    diffuseColor	0.283742 0.252392 0.8
+										    }
+
+									    }
+
+									    geometry	Box {
+										    size	0.4 0.3 0.1
+									    }
+
+								    }
+							    }
+
+							    DEF L_arp Transform {
+								    translation	0 0 -0.25
+								    children Shape {
+									    appearance	Appearance {
+										    material	Material {
+											    diffuseColor	0.313778 0.142667 0.8
+										    }
+
+									    }
+
+									    geometry	Box {
+										    size	0.4 0.3 0.1
+									    }
+
+								    }
+							    }
+
+							    DEF H_arp Transform {
+								    translation	-0.15 0 0
+								    children Shape {
+									    appearance	Appearance {
+										    material	Material {
+											    diffuseColor	0.228661 0.148194 0.7
+										    }
+
+									    }
+
+									    geometry	Box {
+										    size	0.1 0.3 0.6
+									    }
+
+								    }
+							    }
+
+							    DEF Tool_Y_axis Transform {
+								    translation	0 0 0
+								    children Shape {
+									    appearance	Appearance {
+										    material	Material {
+											    diffuseColor	0.155754 0.8 0.0202479
+										    }
+
+									    }
+
+									    geometry	Cylinder {
+										    height	1.5
+										    radius	0.02
+									    }
+
+								    }
+							    }
+
+							    DEF Tool_X_axis Transform {
+								    translation	0 0 0
+								    rotation	0 0 1  1.5708
+								    children Shape {
+									    appearance	Appearance {
+										    material	Material {
+											    diffuseColor	0.77 0.568984 0.178466
+										    }
+
+									    }
+
+									    geometry	Cylinder {
+										    height	1.5
+										    radius	0.02
+									    }
+
+								    }
+							    }
+
+							    DEF Tool_Z_axis Transform {
+								    translation	0 0 0
+								    rotation	1 0 0  1.5708
+								    children Shape {
+									    appearance	Appearance {
+										    material	Material {
+											    diffuseColor	0.8 0.0653061 0.0653061
+										    }
+
+									    }
+
+									    geometry	Cylinder {
+										    height	1.5
+										    radius	0.02
+									    }
+
+								    }
+							    }
+							]
+						}
+					    ]
+				    }
+
+				    DEF Joint2 Transform {
+					    translation	0 0 0
+					    rotation	1 0 0  1.5708
+					    children [ 
+						Shape {
+							appearance	Appearance {
+								material	Material {
+									diffuseColor	0.8 0.0636753 0.110482
+								}
+
+							}
+
+							geometry	Cylinder {
+								height	1.1
+								radius	0.3
+							}
+
+						}
+
+						DEF L2_l Transform {
+							translation	2 -0.4 0
+							children Shape {
+								appearance	Appearance {
+									material	Material {
+										diffuseColor	0.886361 0.9 0.250616
+									}
+
+								}
+
+								geometry	Box {
+									size	4 0.1 0.5
+								}
+
+							}
+						}
+
+						DEF L2_r Transform {
+							translation	2 0.4 0
+							children Shape {
+								appearance	Appearance {
+									material	Material {
+										diffuseColor	0.9 0.885607 0.191249
+									}
+
+								}
+
+								geometry	Box {
+									size	4 0.1 0.5
+								}
+
+							}
+						}
+					    ]
+				    }
+				]
+			}
+
+			DEF Joint1 Transform {
+				translation	0 0 0
+				rotation	1 0 0  1.5708
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0.8 0.0636753 0.110482
+						    }
+
+					    }
+
+					    geometry	Cylinder {
+						    height	0.5
+						    radius	0.3
+					    }
+
+				    }
+
+				    DEF Link1 Transform {
+					    translation	2 0 0
+					    rotation	1 0 0  1.5708
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+								    diffuseColor	0.0726535 0.86491 0.9
+							    }
+
+						    }
+
+						    geometry	Box {
+							    size	4 0.6 0.9
+						    }
+
+					    }
+				    }
+
+				    DEF rotJoint1 Transform {
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+								    diffuseColor	0.8 0.15935 0.112539
+							    }
+
+						    }
+
+						    geometry	Sphere {
+							    radius	0.6
+						    }
+
+					    }
+				    }
+				]
+			}
+		    ]
+	    }
+
+	    DEF Blue_Box Transform {
+		    translation	0 0 0
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+						diffuseColor	0.0433857 0.00998375 0.7
+					}
+
+				}
+
+				geometry	Box {
+					size	2 1 1
+				}
+
+			}
+
+			DEF Base Transform {
+				translation	0 -0.75 0
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							diffuseColor	0.675579 0.69 0.4381
+						}
+
+					}
+
+					geometry	Box {
+						size	3 0.5 2
+					}
+
+				}
+			}
+		    ]
+	    }
+
+	    DEF world_x_axis Transform {
+		    rotation	0 0 1  1.5708
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+						diffuseColor	1 0 0
+					}
+
+				}
+
+				geometry	Cylinder {
+					height	16
+					radius	0.02
+				}
+
+			}
+
+			Transform {
+				rotation	0 0 1  3.14159
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							diffuseColor	1 0 0
+						}
+
+					}
+
+					geometry	Cone {
+						bottomRadius	0.2
+						height	0.4
+					}
+
+				}
+			}
+		    ]
+	    }
+
+	    DEF world_y_axis Transform {
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+						diffuseColor	0 1 0
+					}
+
+				}
+
+				geometry	Cylinder {
+					height	16
+					radius	0.02
+				}
+
+			}
+
+			Transform {
+				translation	0 8 0
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							diffuseColor	0 1 0
+						}
+
+					}
+
+					geometry	Cone {
+						bottomRadius	0.2
+						height	0.4
+					}
+
+				}
+			}
+		    ]
+	    }
+
+	    DEF world_z_axis Transform {
+		    translation	0 0 0
+		    rotation	1 0 0  1.5708
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+						diffuseColor	0 0 1
+					}
+
+				}
+
+				geometry	Cylinder {
+					height	16
+					radius	0.02
+				}
+
+			}
+
+			Transform {
+				translation	0 8 0
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							diffuseColor	0 0 1
+						}
+
+					}
+
+					geometry	Cone {
+						bottomRadius	0.2
+						height	0.4
+					}
+
+				}
+			}
+		    ]
+	    }
+	]
+}
+DEF Viewpoint_Base Viewpoint {
+	position	-0.03 2 10
+	description	"Base"
+}
+DEF Viewpoint_Right_Side Viewpoint {
+	orientation	0 1 0  1.60045
+	position	21.1705 1.4616 0.0223503
+	description	"Right Side"
+}

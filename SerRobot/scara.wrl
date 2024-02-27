@@ -1,0 +1,7623 @@
+#VRML V2.0 utf8
+
+#Created with V-Realm Builder v2.0
+#Integrated Data Systems Inc.
+#www.ids-net.com
+
+
+DirectionalLight {
+	direction	-0.591245 -0.330844 0.735507
+}
+DEF Viewpoint_workspace Viewpoint {
+	orientation	-0.175342 -0.967182 -0.183889  1.57741
+	position	-9.45714 4.39304 0.2869
+	description	"workspace"
+}
+DEF table_frame__sphere Transform {
+	translation	-0.7 0.99 -3
+	children [ 
+	    Shape {
+		    appearance	Appearance {
+			    material	Material {
+			    }
+
+		    }
+
+		    geometry	Sphere {
+			    radius	0.02
+		    }
+
+	    }
+
+	    DEF axis Transform {
+		    translation	-0.5 0 0
+		    rotation	0 0 1  1.5708
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+						diffuseColor	0.84 0.19939 0.133806
+					}
+
+				}
+
+				geometry	Cylinder {
+					height	1
+					radius	0.02
+				}
+
+			}
+
+			Transform {
+				translation	0 0.5 0
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							diffuseColor	0.93 0.017202 0.0716099
+						}
+
+					}
+
+					geometry	Cone {
+						bottomRadius	0.05
+						height	0.2
+					}
+
+				}
+			}
+
+			DEF z Transform {
+				translation	0.5 -0.5 0
+				rotation	0 0 -1  1.5708
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0.0482701 0.103151 0.8
+						    }
+
+					    }
+
+					    geometry	Cylinder {
+						    height	1
+						    radius	0.02
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0.5 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+								    diffuseColor	0.00736418 0.0388145 0.8
+							    }
+
+						    }
+
+						    geometry	Cone {
+							    bottomRadius	0.05
+							    height	0.2
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF y Transform {
+				translation	0 -0.5 0.5
+				rotation	1 0 0  1.5708
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0.0373489 1 0.0695235
+						    }
+
+					    }
+
+					    geometry	Cylinder {
+						    height	1
+						    radius	0.02
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0.5 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+								    diffuseColor	0.0603376 1 0.128938
+							    }
+
+						    }
+
+						    geometry	Cone {
+							    bottomRadius	0.05
+							    height	0.2
+						    }
+
+					    }
+				    }
+				]
+			}
+		    ]
+	    }
+
+	    DEF table-top Transform {
+		    translation	-1.7 1.78814e-007 3
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+						diffuseColor	0.95 0.744101 0.550782
+					}
+
+				}
+
+				geometry	Box {
+					size	3.5 0.01 6
+				}
+
+			}
+
+			DEF RR Transform {
+				translation	1.5 -1 -2.75
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							diffuseColor	0.95 0.76315 0.465306
+						}
+
+					}
+
+					geometry	Box {
+						size	0.5 2 0.5
+					}
+
+				}
+			}
+
+			DEF FR Transform {
+				translation	-1.5 -1 -2.75
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							diffuseColor	0.95 0.742072 0.48753
+						}
+
+					}
+
+					geometry	Box {
+						size	0.5 2 0.5
+					}
+
+				}
+			}
+
+			DEF FL Transform {
+				translation	-1.5 -1 2.75
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							diffuseColor	0.95 0.737662 0.524352
+						}
+
+					}
+
+					geometry	Box {
+						size	0.5 2 0.5
+					}
+
+				}
+			}
+
+			DEF RL Transform {
+				translation	1.5 -1 2.75
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							diffuseColor	0.95 0.755252 0.541015
+						}
+
+					}
+
+					geometry	Box {
+						size	0.5 2 0.5
+					}
+
+				}
+			}
+
+			DEF floor Transform {
+				translation	0 -2 0
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+						}
+
+					}
+
+					geometry	Box {
+						size	19 0.1 19
+					}
+
+				}
+			}
+		    ]
+	    }
+
+	    DEF qb1 Transform {
+		    translation	0 -1 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    diffuseColor	0.0482701 0.103151 0.8
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.2 0.2 0.2
+			    }
+
+		    }
+	    }
+
+	    DEF qw1 Transform {
+		    translation	0 -1 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    diffuseColor	1 0.934412 0.461209
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.2 0.2 0.2
+			    }
+
+		    }
+	    }
+
+	    DEF qg1 Transform {
+		    translation	0 -1 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    diffuseColor	0.0704118 0.8 0.0187111
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.2 0.2 0.2
+			    }
+
+		    }
+	    }
+
+	    DEF qr1 Transform {
+		    translation	0 -1 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    diffuseColor	0.8 0.0120863 0.0901799
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.2 0.2 0.2
+			    }
+
+		    }
+	    }
+
+	    DEF pla Transform {
+		    translation	-2.9 -200 1.7
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+						diffuseColor	0.55169 0.552623 0.77
+					}
+
+				}
+
+				geometry	Box {
+					size	1 0.2 1
+				}
+
+			}
+
+			DEF cy1 Transform {
+				translation	0.4 0.35 -0.4
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							diffuseColor	0.8 0.794443 0.287597
+						}
+
+					}
+
+					geometry	Cylinder {
+						height	0.5
+						radius	0.1
+					}
+
+				}
+			}
+
+			DEF ycolor Transform {
+				translation	-0.4 0.02 0.4
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0.7582 0.8 0.0698554
+						    }
+
+					    }
+
+					    geometry	Cylinder {
+						    height	0.2
+						    radius	0.1
+						    top	FALSE
+						    bottom	TRUE
+					    }
+
+				    }
+
+				    DEF iny Transform {
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+								    diffuseColor	0 0 0
+							    }
+
+						    }
+
+						    geometry	Cylinder {
+							    height	0.2
+							    radius	0.1
+							    side	FALSE
+							    top	TRUE
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF bcolor Transform {
+				translation	-0.4 0.02 -0.4
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0.0195645 0.115159 0.8
+						    }
+
+					    }
+
+					    geometry	Cylinder {
+						    height	0.2
+						    radius	0.1
+						    side	TRUE
+					    }
+
+				    }
+
+				    DEF inb Transform {
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+								    diffuseColor	0 0 0
+							    }
+
+						    }
+
+						    geometry	Cylinder {
+							    height	0.2
+							    radius	0.1
+							    side	FALSE
+							    top	TRUE
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF rcolor Transform {
+				translation	0.4 0.02 0.4
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0.8 0.0298791 0.0923164
+						    }
+
+					    }
+
+					    geometry	Cylinder {
+						    height	0.2
+						    radius	0.1
+					    }
+
+				    }
+
+				    DEF inr Transform {
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+								    diffuseColor	0 0 0
+							    }
+
+						    }
+
+						    geometry	Cylinder {
+							    height	0.2
+							    radius	0.1
+							    side	FALSE
+							    top	TRUE
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF gcolor Transform {
+				translation	0.4 0.02 -0.4
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0.0482701 0.8 0.103151
+						    }
+
+					    }
+
+					    geometry	Cylinder {
+						    height	0.2
+						    radius	0.1
+					    }
+
+				    }
+
+				    DEF ing Transform {
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+								    diffuseColor	0 0 0
+							    }
+
+						    }
+
+						    geometry	Cylinder {
+							    height	0.2
+							    radius	0.1
+							    side	FALSE
+							    top	TRUE
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF cb1 Transform {
+				translation	0.4 0.35 -0.4
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							diffuseColor	0.00267 0.168919 0.8
+						}
+
+					}
+
+					geometry	Cylinder {
+						height	0.5
+						radius	0.1
+					}
+
+				}
+			}
+
+			DEF cg1 Transform {
+				translation	0.4 0.35 -0.4
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							diffuseColor	0.0956848 0.8 0.282788
+						}
+
+					}
+
+					geometry	Cylinder {
+						height	0.5
+						radius	0.1
+					}
+
+				}
+			}
+
+			DEF cr1 Transform {
+				translation	0.4 0.35 -0.4
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							diffuseColor	0.8 0.0324794 0.0480713
+						}
+
+					}
+
+					geometry	Cylinder {
+						height	0.5
+						radius	0.1
+					}
+
+				}
+			}
+
+			DEF grasp_point Transform {
+				translation	0 0.02 0
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0.63 0.63 0.63
+						    }
+
+					    }
+
+					    geometry	Cylinder {
+						    height	0.2
+						    radius	0.1
+						    side	TRUE
+						    top	TRUE
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0.1 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+							    }
+
+						    }
+
+						    geometry	Cylinder {
+							    height	0.2
+							    radius	0.04
+						    }
+
+					    }
+				    }
+				]
+			}
+		    ]
+	    }
+
+	    DEF lab Transform {
+		    translation	0 -200 0
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+					}
+
+				}
+
+				geometry	Sphere {
+					radius	0.1
+				}
+
+			}
+
+			DEF empodio1 Transform {
+				translation	-1.5 0 1.1
+				rotation	0 1 0  0.879646
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							diffuseColor	0.117989 0.674499 0.8
+						}
+
+					}
+
+					geometry	Box {
+						size	1 0.3 0.2
+					}
+
+				}
+			}
+
+			DEF empodio2 Transform {
+				translation	-1 0 1.6
+				rotation	0 1 0  0.911062
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							diffuseColor	0.00240503 0.48 0.276912
+						}
+
+					}
+
+					geometry	Box {
+						size	1.3 0.3 0.2
+					}
+
+				}
+			}
+
+			DEF empodio3 Transform {
+				translation	-2.1 0 2.4
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							diffuseColor	0.4 0.3 0.8
+						}
+
+					}
+
+					geometry	Cylinder {
+						height	0.3
+						radius	0.3
+					}
+
+				}
+			}
+
+			DEF empodio4 Transform {
+				translation	-2.40025 0 4.49991
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							diffuseColor	0.488082 0.577088 0.8
+						}
+
+					}
+
+					geometry	Box {
+						size	1.3 0.3 2.5
+					}
+
+				}
+			}
+
+			DEF empodio5 Transform {
+				translation	-0.6 0 3.9
+				rotation	0 1 0  0.471239
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							diffuseColor	0.8 0.458599 0.149802
+						}
+
+					}
+
+					geometry	Box {
+						size	0.4 0.3 2
+					}
+
+				}
+			}
+
+			DEF empodio6 Transform {
+				translation	-1.2 0 4.8
+				rotation	0 1 0  0.471239
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							diffuseColor	0.61 0.0871429 0.0871429
+						}
+
+					}
+
+					geometry	Box {
+						size	0.4 0.3 2
+					}
+
+				}
+			}
+		    ]
+	    }
+
+	    DEF grt Transform {
+		    translation	0 -200 0
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+					}
+
+				}
+
+				geometry	Sphere {
+					radius	0.02
+				}
+
+			}
+
+			DEF horizontal-x Transform {
+				translation	-1.7 0 0
+				rotation	0 0 1  1.5708
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+						    }
+
+					    }
+
+					    geometry	Cylinder {
+						    height	3.5
+						    radius	0.02
+					    }
+
+				    }
+
+				    DEF horizontal1 Transform {
+					    translation	-1.19259e-007 -1.40667e-005 1
+					    children [ 
+						Shape {
+							appearance	Appearance {
+								material	Material {
+								}
+
+							}
+
+							geometry	Cylinder {
+								height	3.5
+								radius	0.02
+							}
+
+						}
+
+						DEF horizontal2 Transform {
+							translation	0 0 1
+							children [ 
+							    Shape {
+								    appearance	Appearance {
+									    material	Material {
+									    }
+
+								    }
+
+								    geometry	Cylinder {
+									    height	3.5
+									    radius	0.02
+								    }
+
+							    }
+
+							    DEF horizontal3 Transform {
+								    translation	0 0 1
+								    children [ 
+									Shape {
+										appearance	Appearance {
+											material	Material {
+											}
+
+										}
+
+										geometry	Cylinder {
+											height	3.5
+											radius	0.02
+										}
+
+									}
+
+									DEF horizontal4 Transform {
+										translation	0 0 1
+										children [ 
+										    Shape {
+											    appearance	Appearance {
+												    material	Material {
+												    }
+
+											    }
+
+											    geometry	Cylinder {
+												    height	3.5
+												    radius	0.02
+											    }
+
+										    }
+
+										    DEF horizontal5 Transform {
+											    translation	0 0 1
+											    children [ 
+												Shape {
+													appearance	Appearance {
+														material	Material {
+														}
+
+													}
+
+													geometry	Cylinder {
+														height	3.5
+														radius	0.02
+													}
+
+												}
+
+												DEF horizontal6 Transform {
+													translation	0 0 1
+													children Shape {
+														appearance	Appearance {
+															material	Material {
+															}
+
+														}
+
+														geometry	Cylinder {
+															height	3.5
+															radius	0.02
+														}
+
+													}
+												}
+											    ]
+										    }
+										]
+									}
+								    ]
+							    }
+							]
+						}
+					    ]
+				    }
+				]
+			}
+
+			DEF vertical-y Transform {
+				translation	0 0 3
+				rotation	1 0 0  1.5708
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+						    }
+
+					    }
+
+					    geometry	Cylinder {
+						    height	6
+						    radius	0.02
+					    }
+
+				    }
+
+				    DEF vertical1 Transform {
+					    translation	-1 0 0
+					    children [ 
+						Shape {
+							appearance	Appearance {
+								material	Material {
+								}
+
+							}
+
+							geometry	Cylinder {
+								height	6
+								radius	0.02
+							}
+
+						}
+
+						DEF vertical2 Transform {
+							translation	-1 0 0
+							children [ 
+							    Shape {
+								    appearance	Appearance {
+									    material	Material {
+									    }
+
+								    }
+
+								    geometry	Cylinder {
+									    height	6
+									    radius	0.02
+								    }
+
+							    }
+
+							    DEF vertical3 Transform {
+								    translation	-1 0 0
+								    children Shape {
+									    appearance	Appearance {
+										    material	Material {
+										    }
+
+									    }
+
+									    geometry	Cylinder {
+										    height	6
+										    radius	0.02
+									    }
+
+								    }
+							    }
+							]
+						}
+					    ]
+				    }
+				]
+			}
+		    ]
+	    }
+
+	    DEF trace Transform {
+		    translation	0 -30 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    diffuseColor	0.89 0.0181633 0.0181633
+				    }
+
+			    }
+
+			    geometry	Sphere {
+				    radius	0.02
+			    }
+
+		    }
+	    }
+
+	    DEF tei Transform {
+		    translation	0 -0.095 0
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+					}
+
+				}
+
+				geometry	Sphere {
+					radius	0.01
+				}
+
+			}
+
+			DEF b01 Transform {
+				translation	-1.5 -200.025 0.3
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	1 0 0
+						    }
+
+					    }
+
+					    geometry	Box {
+						    size	1 0.05 0.05
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+							    }
+
+						    }
+
+						    geometry	Cylinder {
+							    height	0.07
+							    radius	0.015
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF b07 Transform {
+				translation	-0.5 -200.05 0.4
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	1 0 0
+						    }
+
+					    }
+
+					    geometry	Box {
+						    size	1 0.05 0.05
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+							    }
+
+						    }
+
+						    geometry	Cylinder {
+							    height	0.07
+							    radius	0.01
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF b02 Transform {
+				translation	-2.5 -200.025 0.6
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	1 0 0
+						    }
+
+					    }
+
+					    geometry	Box {
+						    size	1 0.05 0.05
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+							    }
+
+						    }
+
+						    geometry	Cylinder {
+							    height	0.07
+							    radius	0.01
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF b03 Transform {
+				translation	-0.5 -200.05 0.8
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	1 0 0
+						    }
+
+					    }
+
+					    geometry	Box {
+						    size	1 0.05 0.05
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+							    }
+
+						    }
+
+						    geometry	Cylinder {
+							    height	0.07
+							    radius	0.01
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF b04 Transform {
+				translation	-0.5 -200.05 1
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	1 0 0
+						    }
+
+					    }
+
+					    geometry	Box {
+						    size	1 0.05 0.05
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+							    }
+
+						    }
+
+						    geometry	Cylinder {
+							    height	0.07
+							    radius	0.01
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF b05 Transform {
+				translation	-0.5 -200.05 1.2
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	1 0 0
+						    }
+
+					    }
+
+					    geometry	Box {
+						    size	1 0.05 0.05
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+							    }
+
+						    }
+
+						    geometry	Cylinder {
+							    height	0.07
+							    radius	0.01
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF b06 Transform {
+				translation	-0.5 -200.05 1.4
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	1 0 0
+						    }
+
+					    }
+
+					    geometry	Box {
+						    size	1 0.05 0.05
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+							    }
+
+						    }
+
+						    geometry	Cylinder {
+							    height	0.07
+							    radius	0.01
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF b08 Transform {
+				translation	-1.5 -200.05 0.5
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	1 0 0
+						    }
+
+					    }
+
+					    geometry	Box {
+						    size	1 0.05 0.05
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+							    }
+
+						    }
+
+						    geometry	Cylinder {
+							    height	0.07
+							    radius	0.01
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF b09 Transform {
+				translation	-1.5 -200.05 0.7
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0.3 0.8 0.5
+						    }
+
+					    }
+
+					    geometry	Box {
+						    size	0.7 0.05 0.05
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+							    }
+
+						    }
+
+						    geometry	Cylinder {
+							    height	0.07
+							    radius	0.01
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF b10 Transform {
+				translation	-1.5 -200.05 0.9
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0.3 0.8 0.5
+						    }
+
+					    }
+
+					    geometry	Box {
+						    size	0.7 0.05 0.05
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+							    }
+
+						    }
+
+						    geometry	Cylinder {
+							    height	0.07
+							    radius	0.01
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF b11 Transform {
+				translation	-1.5 -200.05 1.1
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0.3 0.8 0.5
+						    }
+
+					    }
+
+					    geometry	Box {
+						    size	0.7 0.05 0.05
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+							    }
+
+						    }
+
+						    geometry	Cylinder {
+							    height	0.07
+							    radius	0.01
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF b12 Transform {
+				translation	-1.5 -200.05 1.3
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0.3 0.8 0.5
+						    }
+
+					    }
+
+					    geometry	Box {
+						    size	0.7 0.05 0.05
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+							    }
+
+						    }
+
+						    geometry	Cylinder {
+							    height	0.07
+							    radius	0.01
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF s01 Transform {
+				translation	-0.5 -200.05 5.8
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0 0.4 0.7
+						    }
+
+					    }
+
+					    geometry	Box {
+						    size	0.5 0.05 0.05
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+							    }
+
+						    }
+
+						    geometry	Cylinder {
+							    height	0.07
+							    radius	0.01
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF s02 Transform {
+				translation	-0.5 -200.05 5.6
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0 0.4 0.7
+						    }
+
+					    }
+
+					    geometry	Box {
+						    size	0.5 0.05 0.05
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+							    }
+
+						    }
+
+						    geometry	Cylinder {
+							    height	0.07
+							    radius	0.01
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF s03 Transform {
+				translation	-0.5 -200.05 5.4
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0 0.4 0.7
+						    }
+
+					    }
+
+					    geometry	Box {
+						    size	0.5 0.05 0.05
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+							    }
+
+						    }
+
+						    geometry	Cylinder {
+							    height	0.07
+							    radius	0.01
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF s04 Transform {
+				translation	-0.5 -200.05 5.2
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0 0.4 0.7
+						    }
+
+					    }
+
+					    geometry	Box {
+						    size	0.5 0.05 0.05
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+							    }
+
+						    }
+
+						    geometry	Cylinder {
+							    height	0.07
+							    radius	0.01
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF s05 Transform {
+				translation	-0.5 -200.05 5
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0 0.4 0.7
+						    }
+
+					    }
+
+					    geometry	Box {
+						    size	0.5 0.05 0.05
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+							    }
+
+						    }
+
+						    geometry	Cylinder {
+							    height	0.07
+							    radius	0.01
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF s06 Transform {
+				translation	-0.5 -200.05 4.8
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0 0.4 0.7
+						    }
+
+					    }
+
+					    geometry	Box {
+						    size	0.5 0.05 0.05
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+							    }
+
+						    }
+
+						    geometry	Cylinder {
+							    height	0.07
+							    radius	0.01
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF s07 Transform {
+				translation	-0.5 -200.05 4.6
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0 0.4 0.7
+						    }
+
+					    }
+
+					    geometry	Box {
+						    size	0.5 0.05 0.05
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+							    }
+
+						    }
+
+						    geometry	Cylinder {
+							    height	0.07
+							    radius	0.01
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF s08 Transform {
+				translation	-0.5 -200.05 4.4
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0 0.4 0.7
+						    }
+
+					    }
+
+					    geometry	Box {
+						    size	0.5 0.05 0.05
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+							    }
+
+						    }
+
+						    geometry	Cylinder {
+							    height	0.07
+							    radius	0.01
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF s09 Transform {
+				translation	-0.5 -200.05 4.2
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0 0.4 0.7
+						    }
+
+					    }
+
+					    geometry	Box {
+						    size	0.5 0.05 0.05
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+							    }
+
+						    }
+
+						    geometry	Cylinder {
+							    height	0.07
+							    radius	0.01
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF s10 Transform {
+				translation	-0.5 -200.05 4
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0 0.4 0.7
+						    }
+
+					    }
+
+					    geometry	Box {
+						    size	0.5 0.05 0.05
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+							    }
+
+						    }
+
+						    geometry	Cylinder {
+							    height	0.07
+							    radius	0.01
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF s11 Transform {
+				translation	-1.25 -200.05 4
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0 0.4 0.7
+						    }
+
+					    }
+
+					    geometry	Box {
+						    size	0.5 0.05 0.05
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+							    }
+
+						    }
+
+						    geometry	Cylinder {
+							    height	0.07
+							    radius	0.01
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF s12 Transform {
+				translation	-1.25 -200.05 5.6
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0 0.4 0.7
+						    }
+
+					    }
+
+					    geometry	Box {
+						    size	0.5 0.05 0.05
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+							    }
+
+						    }
+
+						    geometry	Cylinder {
+							    height	0.07
+							    radius	0.01
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF s13 Transform {
+				translation	-1.25 -200.05 5.4
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0 0.4 0.7
+						    }
+
+					    }
+
+					    geometry	Box {
+						    size	0.5 0.05 0.05
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+							    }
+
+						    }
+
+						    geometry	Cylinder {
+							    height	0.07
+							    radius	0.01
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF s14 Transform {
+				translation	-1.25 -200.05 5.2
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0 0.4 0.7
+						    }
+
+					    }
+
+					    geometry	Box {
+						    size	0.5 0.05 0.05
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+							    }
+
+						    }
+
+						    geometry	Cylinder {
+							    height	0.07
+							    radius	0.01
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF s15 Transform {
+				translation	-1.25 -200.05 5
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0 0.4 0.7
+						    }
+
+					    }
+
+					    geometry	Box {
+						    size	0.5 0.05 0.05
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+							    }
+
+						    }
+
+						    geometry	Cylinder {
+							    height	0.07
+							    radius	0.01
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF s16 Transform {
+				translation	-1.25 -200.05 4.8
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0 0.4 0.7
+						    }
+
+					    }
+
+					    geometry	Box {
+						    size	0.5 0.05 0.05
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+							    }
+
+						    }
+
+						    geometry	Cylinder {
+							    height	0.07
+							    radius	0.01
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF s17 Transform {
+				translation	-1.25 -200.05 4.6
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0 0.4 0.7
+						    }
+
+					    }
+
+					    geometry	Box {
+						    size	0.5 0.05 0.05
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+							    }
+
+						    }
+
+						    geometry	Cylinder {
+							    height	0.07
+							    radius	0.01
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF s18 Transform {
+				translation	-1.25 -200.05 4.4
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0 0.4 0.7
+						    }
+
+					    }
+
+					    geometry	Box {
+						    size	0.5 0.05 0.05
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+							    }
+
+						    }
+
+						    geometry	Cylinder {
+							    height	0.07
+							    radius	0.01
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF s19 Transform {
+				translation	-1.25 -200.05 4.2
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0 0.4 0.7
+						    }
+
+					    }
+
+					    geometry	Box {
+						    size	0.5 0.05 0.05
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+							    }
+
+						    }
+
+						    geometry	Cylinder {
+							    height	0.07
+							    radius	0.01
+						    }
+
+					    }
+				    }
+				]
+			}
+		    ]
+	    }
+
+	    DEF gt2 Transform {
+		    translation	0 -200 0
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+					}
+
+				}
+
+				geometry	Sphere {
+					radius	0.02
+				}
+
+			}
+
+			DEF horizontal-x Transform {
+				translation	-1.7 0 0.5
+				rotation	0 0 1  1.5708
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+						    }
+
+					    }
+
+					    geometry	Cylinder {
+						    height	3.5
+						    radius	0.02
+					    }
+
+				    }
+
+				    DEF horizontal1 Transform {
+					    translation	-1.19259e-007 -1.40667e-005 1
+					    children [ 
+						Shape {
+							appearance	Appearance {
+								material	Material {
+								}
+
+							}
+
+							geometry	Cylinder {
+								height	3.5
+								radius	0.02
+							}
+
+						}
+
+						DEF horizontal2 Transform {
+							translation	0 0 1
+							children [ 
+							    Shape {
+								    appearance	Appearance {
+									    material	Material {
+									    }
+
+								    }
+
+								    geometry	Cylinder {
+									    height	3.5
+									    radius	0.02
+								    }
+
+							    }
+
+							    DEF horizontal3 Transform {
+								    translation	0 0 1
+								    children [ 
+									Shape {
+										appearance	Appearance {
+											material	Material {
+											}
+
+										}
+
+										geometry	Cylinder {
+											height	3.5
+											radius	0.02
+										}
+
+									}
+
+									DEF horizontal4 Transform {
+										translation	0 0 1
+										children [ 
+										    Shape {
+											    appearance	Appearance {
+												    material	Material {
+												    }
+
+											    }
+
+											    geometry	Cylinder {
+												    height	3.5
+												    radius	0.02
+											    }
+
+										    }
+
+										    DEF horizontal5 Transform {
+											    translation	0 0 1
+											    children Shape {
+												    appearance	Appearance {
+													    material	Material {
+													    }
+
+												    }
+
+												    geometry	Cylinder {
+													    height	3.5
+													    radius	0.02
+												    }
+
+											    }
+										    }
+										]
+									}
+								    ]
+							    }
+							]
+						}
+					    ]
+				    }
+				]
+			}
+
+			DEF vertical-y Transform {
+				translation	-0.5 0 3
+				rotation	1 0 0  1.5708
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+						    }
+
+					    }
+
+					    geometry	Cylinder {
+						    height	6
+						    radius	0.02
+					    }
+
+				    }
+
+				    DEF vertical1 Transform {
+					    translation	-1 0 0
+					    children [ 
+						Shape {
+							appearance	Appearance {
+								material	Material {
+								}
+
+							}
+
+							geometry	Cylinder {
+								height	6
+								radius	0.02
+							}
+
+						}
+
+						DEF vertical2 Transform {
+							translation	-1 0 0
+							children [ 
+							    Shape {
+								    appearance	Appearance {
+									    material	Material {
+									    }
+
+								    }
+
+								    geometry	Cylinder {
+									    height	6
+									    radius	0.02
+								    }
+
+							    }
+
+							    DEF vertical3 Transform {
+								    translation	-1 0 0
+								    children Shape {
+									    appearance	Appearance {
+										    material	Material {
+										    }
+
+									    }
+
+									    geometry	Cylinder {
+										    height	6
+										    radius	0.02
+									    }
+
+								    }
+							    }
+							]
+						}
+					    ]
+				    }
+				]
+			}
+		    ]
+	    }
+
+	    DEF ob1 Transform {
+		    translation	-0.5 -200 2
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    diffuseColor	0.4 0.4 0.4
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	1 1 0.5
+			    }
+
+		    }
+	    }
+
+	    DEF ob2 Transform {
+		    translation	-2.75 -200 2
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    diffuseColor	0.4 0.4 0.4
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	1.5 1 0.5
+			    }
+
+		    }
+	    }
+
+	    DEF grz Transform {
+		    translation	0 -200 0
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+						diffuseColor	0 0 1
+					}
+
+				}
+
+				geometry	Cylinder {
+					height	0.04
+					radius	0.4
+					top	FALSE
+					bottom	FALSE
+				}
+
+			}
+
+			DEF grz1 Transform {
+				translation	0 -0.2 0
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							diffuseColor	0 0 1
+						}
+
+					}
+
+					geometry	Cylinder {
+						height	0.04
+						radius	0.4
+						top	FALSE
+						bottom	FALSE
+					}
+
+				}
+			}
+
+			DEF grz2 Transform {
+				translation	0 -0.4 0
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0 0 1
+						    }
+
+					    }
+
+					    geometry	Cylinder {
+						    height	0.04
+						    radius	0.4
+						    top	FALSE
+						    bottom	FALSE
+					    }
+
+				    }
+
+				    DEF grz3 Transform {
+					    translation	0 -0.2 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+								    diffuseColor	0 0 1
+							    }
+
+						    }
+
+						    geometry	Cylinder {
+							    height	0.04
+							    radius	0.4
+							    top	FALSE
+							    bottom	FALSE
+						    }
+
+					    }
+				    }
+
+				    DEF grz4 Transform {
+					    translation	0 -0.4 0
+					    children [ 
+						Shape {
+							appearance	Appearance {
+								material	Material {
+									diffuseColor	0 0 1
+								}
+
+							}
+
+							geometry	Cylinder {
+								height	0.04
+								radius	0.4
+								top	FALSE
+								bottom	FALSE
+							}
+
+						}
+
+						DEF grz5 Transform {
+							translation	0 -0.2 0
+							children [ 
+							    Shape {
+								    appearance	Appearance {
+									    material	Material {
+										    diffuseColor	0 0 1
+									    }
+
+								    }
+
+								    geometry	Cylinder {
+									    height	0.04
+									    radius	0.4
+									    top	FALSE
+									    bottom	FALSE
+								    }
+
+							    }
+
+							    DEF grz6 Transform {
+								    translation	0 -0.2 0
+								    children Shape {
+									    appearance	Appearance {
+										    material	Material {
+											    diffuseColor	0 0 1
+										    }
+
+									    }
+
+									    geometry	Cylinder {
+										    height	0.04
+										    radius	0.4
+										    top	FALSE
+										    bottom	FALSE
+									    }
+
+								    }
+							    }
+							]
+						}
+					    ]
+				    }
+				]
+			}
+		    ]
+	    }
+
+	    DEF ase Transform {
+		    translation	0 0.03 0
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+					}
+
+				}
+
+				geometry	Sphere {
+					radius	0.01
+				}
+
+			}
+
+			DEF A01 Transform {
+				translation	-1 -200 2
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+						    }
+
+					    }
+
+					    geometry	Sphere {
+						    radius	0.01
+					    }
+
+				    }
+
+				    DEF transform1 Transform {
+					    translation	0.25 -0.125 -0.25
+					    children [ 
+						Shape {
+							appearance	Appearance {
+								material	Material {
+									diffuseColor	1 0 0
+								}
+
+							}
+
+							geometry	Box {
+								size	0.5 0.25 0.5
+							}
+
+						}
+
+						DEF transform2 Transform {
+							translation	0 0 -0.5
+							children [ 
+							    Shape {
+								    appearance	Appearance {
+									    material	Material {
+										    diffuseColor	1 0 0
+									    }
+
+								    }
+
+								    geometry	Box {
+									    size	0.5 0.25 0.5
+								    }
+
+							    }
+
+							    DEF transform3 Transform {
+								    translation	0 0 -0.5
+								    children Shape {
+									    appearance	Appearance {
+										    material	Material {
+											    diffuseColor	1 0 0
+										    }
+
+									    }
+
+									    geometry	Box {
+										    size	0.5 0.25 0.5
+									    }
+
+								    }
+							    }
+
+							    DEF transform4 Transform {
+								    translation	-0.5 0 0
+								    children [ 
+									Shape {
+										appearance	Appearance {
+											material	Material {
+												diffuseColor	1 0 0
+											}
+
+										}
+
+										geometry	Box {
+											size	0.5 0.25 0.5
+										}
+
+									}
+
+									DEF transform5 Transform {
+										translation	0 0 -0.5
+										children Shape {
+											appearance	Appearance {
+												material	Material {
+													diffuseColor	1 0 0
+												}
+
+											}
+
+											geometry	Box {
+												size	0.5 0.25 0.5
+											}
+
+										}
+									}
+
+									DEF transform4 Transform {
+										translation	-0.5 0 0
+										children [ 
+										    Shape {
+											    appearance	Appearance {
+												    material	Material {
+													    diffuseColor	1 0 0
+												    }
+
+											    }
+
+											    geometry	Box {
+												    size	0.5 0.25 0.5
+											    }
+
+										    }
+
+										    DEF transform5 Transform {
+											    translation	0 0 -0.5
+											    children Shape {
+												    appearance	Appearance {
+													    material	Material {
+														    diffuseColor	1 0 0
+													    }
+
+												    }
+
+												    geometry	Box {
+													    size	0.5 0.25 0.5
+												    }
+
+											    }
+										    }
+										]
+									}
+								    ]
+							    }
+							]
+						}
+					    ]
+				    }
+
+				    DEF grip Transform {
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+								    diffuseColor	1 0.971138 0.992785
+							    }
+
+						    }
+
+						    geometry	Cylinder {
+							    height	0.2
+							    radius	0.02
+							    bottom	TRUE
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF A02 Transform {
+				translation	-2 -200.125 2
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+						    }
+
+					    }
+
+					    geometry	Sphere {
+						    radius	0.01
+					    }
+
+				    }
+
+				    DEF grip Transform {
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+								    diffuseColor	1 0.971138 0.992785
+							    }
+
+						    }
+
+						    geometry	Cylinder {
+							    height	0.2
+							    radius	0.02
+							    bottom	TRUE
+						    }
+
+					    }
+				    }
+
+				    DEF transform1 Transform {
+					    translation	0.25 -0.125 0.25
+					    children [ 
+						Shape {
+							appearance	Appearance {
+								material	Material {
+									diffuseColor	0 0 1
+								}
+
+							}
+
+							geometry	Box {
+								size	0.5 0.25 0.5
+							}
+
+						}
+
+						DEF transform2 Transform {
+							translation	-0.5 0 0
+							children [ 
+							    Shape {
+								    appearance	Appearance {
+									    material	Material {
+										    diffuseColor	0 0 1
+									    }
+
+								    }
+
+								    geometry	Box {
+									    size	0.5 0.25 0.5
+								    }
+
+							    }
+
+							    DEF transform3 Transform {
+								    translation	0 0 -0.5
+								    children [ 
+									Shape {
+										appearance	Appearance {
+											material	Material {
+												diffuseColor	0 0 1
+											}
+
+										}
+
+										geometry	Box {
+											size	0.5 0.25 0.5
+										}
+
+									}
+
+									DEF transform4 Transform {
+										translation	0 0 -0.5
+										children [ 
+										    Shape {
+											    appearance	Appearance {
+												    material	Material {
+													    diffuseColor	0 0 1
+												    }
+
+											    }
+
+											    geometry	Box {
+												    size	0.5 0.25 0.5
+											    }
+
+										    }
+
+										    DEF transform5 Transform {
+											    translation	0 0 -0.5
+											    children Shape {
+												    appearance	Appearance {
+													    material	Material {
+														    diffuseColor	0 0 1
+													    }
+
+												    }
+
+												    geometry	Box {
+													    size	0.5 0.25 0.5
+												    }
+
+											    }
+										    }
+										]
+									}
+								    ]
+							    }
+							]
+						}
+					    ]
+				    }
+				]
+			}
+
+			DEF A03 Transform {
+				translation	-1.5 -200.125 2.5
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+						    }
+
+					    }
+
+					    geometry	Sphere {
+						    radius	0.01
+					    }
+
+				    }
+
+				    DEF grip Transform {
+					    translation	0 0 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+								    diffuseColor	1 0.971138 0.992785
+							    }
+
+						    }
+
+						    geometry	Cylinder {
+							    height	0.2
+							    radius	0.02
+							    bottom	TRUE
+						    }
+
+					    }
+				    }
+
+				    DEF transform1 Transform {
+					    translation	-0.25 -0.125 0.25
+					    children [ 
+						Shape {
+							appearance	Appearance {
+								material	Material {
+									diffuseColor	0 1 0
+								}
+
+							}
+
+							geometry	Box {
+								size	0.5 0.25 0.5
+							}
+
+						}
+
+						DEF transform2 Transform {
+							translation	-0.5 0 0
+							children Shape {
+								appearance	Appearance {
+									material	Material {
+										diffuseColor	0 1 0
+									}
+
+								}
+
+								geometry	Box {
+									size	0.5 0.25 0.5
+								}
+
+							}
+						}
+
+						DEF transform3 Transform {
+							translation	0.5 0 -0.5
+							rotation	0 1 0  1.5708
+							children [ 
+							    Shape {
+								    appearance	Appearance {
+									    material	Material {
+										    diffuseColor	0 1 0
+									    }
+
+								    }
+
+								    geometry	Box {
+									    size	0.5 0.25 0.5
+								    }
+
+							    }
+
+							    DEF transform4 Transform {
+								    translation	-0.5 0 0
+								    children Shape {
+									    appearance	Appearance {
+										    material	Material {
+											    diffuseColor	0 1 0
+										    }
+
+									    }
+
+									    geometry	Box {
+										    size	0.5 0.25 0.5
+									    }
+
+								    }
+							    }
+
+							    DEF transform5 Transform {
+								    translation	0.5 0 -0.5
+								    rotation	0 1 0  1.5708
+								    children [ 
+									Shape {
+										appearance	Appearance {
+											material	Material {
+												diffuseColor	0 1 0
+											}
+
+										}
+
+										geometry	Box {
+											size	0.5 0.25 0.5
+										}
+
+									}
+
+									DEF transform6 Transform {
+										translation	-0.5 0 0
+										children Shape {
+											appearance	Appearance {
+												material	Material {
+													diffuseColor	0 1 0
+												}
+
+											}
+
+											geometry	Box {
+												size	0.5 0.25 0.5
+											}
+
+										}
+									}
+								    ]
+							    }
+							]
+						}
+					    ]
+				    }
+				]
+			}
+
+			DEF A04 Transform {
+				translation	-1 -200.125 4.5
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+						    }
+
+					    }
+
+					    geometry	Sphere {
+						    radius	0.01
+					    }
+
+				    }
+
+				    DEF grip Transform {
+					    translation	0 0 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+								    diffuseColor	1 0.971138 0.992785
+							    }
+
+						    }
+
+						    geometry	Cylinder {
+							    height	0.2
+							    radius	0.02
+							    bottom	TRUE
+						    }
+
+					    }
+				    }
+
+				    DEF transform1 Transform {
+					    translation	0.25 -0.125 -0.25
+					    children [ 
+						Shape {
+							appearance	Appearance {
+								material	Material {
+									diffuseColor	0 0 1
+								}
+
+							}
+
+							geometry	Box {
+								size	0.5 0.25 0.5
+							}
+
+						}
+
+						DEF transform2 Transform {
+							translation	0 0 -0.5
+							children [ 
+							    Shape {
+								    appearance	Appearance {
+									    material	Material {
+										    diffuseColor	0 0 1
+									    }
+
+								    }
+
+								    geometry	Box {
+									    size	0.5 0.25 0.5
+								    }
+
+							    }
+
+							    DEF transform3 Transform {
+								    translation	0 0 -0.5
+								    children [ 
+									Shape {
+										appearance	Appearance {
+											material	Material {
+												diffuseColor	0 0 1
+											}
+
+										}
+
+										geometry	Box {
+											size	0.5 0.25 0.5
+										}
+
+									}
+
+									DEF transform4 Transform {
+										translation	0 0 -0.5
+										children [ 
+										    Shape {
+											    appearance	Appearance {
+												    material	Material {
+													    diffuseColor	0 0 1
+												    }
+
+											    }
+
+											    geometry	Box {
+												    size	0.5 0.25 0.5
+											    }
+
+										    }
+
+										    DEF transform5 Transform {
+											    translation	0 0 -0.5
+											    children Shape {
+												    appearance	Appearance {
+													    material	Material {
+														    diffuseColor	0 0 1
+													    }
+
+												    }
+
+												    geometry	Box {
+													    size	0.5 0.25 0.5
+												    }
+
+											    }
+										    }
+										]
+									}
+								    ]
+							    }
+							]
+						}
+					    ]
+				    }
+				]
+			}
+
+			DEF A05 Transform {
+				translation	-1.5 -200.125 4.5
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+						    }
+
+					    }
+
+					    geometry	Sphere {
+						    radius	0.01
+					    }
+
+				    }
+
+				    DEF grip Transform {
+					    translation	0 0 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+								    diffuseColor	1 0.971138 0.992785
+							    }
+
+						    }
+
+						    geometry	Cylinder {
+							    height	0.2
+							    radius	0.02
+							    bottom	TRUE
+						    }
+
+					    }
+				    }
+
+				    DEF transform1 Transform {
+					    translation	0.25 -0.125 0.25
+					    children [ 
+						Shape {
+							appearance	Appearance {
+								material	Material {
+									diffuseColor	1 0 0
+								}
+
+							}
+
+							geometry	Box {
+								size	0.5 0.25 0.5
+							}
+
+						}
+
+						DEF transform2 Transform {
+							translation	0 0 -0.5
+							children [ 
+							    Shape {
+								    appearance	Appearance {
+									    material	Material {
+										    diffuseColor	1 0 0
+									    }
+
+								    }
+
+								    geometry	Box {
+									    size	0.5 0.25 0.5
+								    }
+
+							    }
+
+							    DEF transform3 Transform {
+								    translation	0 0 -0.5
+								    children [ 
+									Shape {
+										appearance	Appearance {
+											material	Material {
+												diffuseColor	1 0 0
+											}
+
+										}
+
+										geometry	Box {
+											size	0.5 0.25 0.5
+										}
+
+									}
+
+									DEF transform4 Transform {
+										translation	0 0 -0.5
+										children [ 
+										    Shape {
+											    appearance	Appearance {
+												    material	Material {
+													    diffuseColor	1 0 0
+												    }
+
+											    }
+
+											    geometry	Box {
+												    size	0.5 0.25 0.5
+											    }
+
+										    }
+
+										    DEF transform5 Transform {
+											    translation	-0.5 0 1
+											    rotation	0 1 0  1.5708
+											    children [ 
+												Shape {
+													appearance	Appearance {
+														material	Material {
+															diffuseColor	1 0 0
+														}
+
+													}
+
+													geometry	Box {
+														size	0.5 0.25 0.5
+													}
+
+												}
+
+												DEF transform6 Transform {
+													translation	0 0 -0.5
+													children [ 
+													    Shape {
+														    appearance	Appearance {
+															    material	Material {
+																    diffuseColor	1 0 0
+															    }
+
+														    }
+
+														    geometry	Box {
+															    size	0.5 0.25 0.5
+														    }
+
+													    }
+
+													    DEF transform7 Transform {
+														    translation	1 0 0
+														    rotation	0 1 0  1.5708
+														    children [ 
+															Shape {
+																appearance	Appearance {
+																	material	Material {
+																		diffuseColor	1 0 0
+																	}
+
+																}
+
+																geometry	Box {
+																	size	0.5 0.25 0.5
+																}
+
+															}
+
+															DEF transform8 Transform {
+																translation	0 0 -0.5
+																children Shape {
+																	appearance	Appearance {
+																		material	Material {
+																			diffuseColor	1 0 0
+																		}
+
+																	}
+
+																	geometry	Box {
+																		size	0.5 0.25 0.5
+																	}
+
+																}
+															}
+														    ]
+													    }
+													]
+												}
+											    ]
+										    }
+										]
+									}
+								    ]
+							    }
+							]
+						}
+					    ]
+				    }
+				]
+			}
+
+			DEF A06 Transform {
+				translation	-1.5 -200.125 4
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+						    }
+
+					    }
+
+					    geometry	Sphere {
+						    radius	0.01
+					    }
+
+				    }
+
+				    DEF grip Transform {
+					    translation	0 0 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+								    diffuseColor	1 0.971138 0.992785
+							    }
+
+						    }
+
+						    geometry	Cylinder {
+							    height	0.2
+							    radius	0.02
+							    bottom	TRUE
+						    }
+
+					    }
+				    }
+
+				    DEF transform1 Transform {
+					    translation	-0.25 -0.125 -0.25
+					    children [ 
+						Shape {
+							appearance	Appearance {
+								material	Material {
+									diffuseColor	0 0 1
+								}
+
+							}
+
+							geometry	Box {
+								size	0.5 0.25 0.5
+							}
+
+						}
+
+						DEF transform2 Transform {
+							translation	0 0 -0.5
+							children Shape {
+								appearance	Appearance {
+									material	Material {
+										diffuseColor	0 0 1
+									}
+
+								}
+
+								geometry	Box {
+									size	0.5 0.25 0.5
+								}
+
+							}
+						}
+					    ]
+				    }
+				]
+			}
+
+			DEF A07 Transform {
+				translation	-1 -200.125 5
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+						    }
+
+					    }
+
+					    geometry	Sphere {
+						    radius	0.01
+					    }
+
+				    }
+
+				    DEF grip Transform {
+					    translation	0 0 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+								    diffuseColor	1 0.971138 0.992785
+							    }
+
+						    }
+
+						    geometry	Cylinder {
+							    height	0.2
+							    radius	0.02
+							    bottom	TRUE
+						    }
+
+					    }
+				    }
+
+				    DEF transform1 Transform {
+					    translation	0.25 -0.125 -0.25
+					    children [ 
+						Shape {
+							appearance	Appearance {
+								material	Material {
+									diffuseColor	0 1 0
+								}
+
+							}
+
+							geometry	Box {
+								size	0.5 0.25 0.5
+							}
+
+						}
+
+						DEF transform2 Transform {
+							translation	0 0 0.5
+							children [ 
+							    Shape {
+								    appearance	Appearance {
+									    material	Material {
+										    diffuseColor	0 1 0
+									    }
+
+								    }
+
+								    geometry	Box {
+									    size	0.5 0.25 0.5
+								    }
+
+							    }
+
+							    DEF transform3 Transform {
+								    translation	-1 0 -0.5
+								    children [ 
+									Shape {
+										appearance	Appearance {
+											material	Material {
+												diffuseColor	0 1 0
+											}
+
+										}
+
+										geometry	Box {
+											size	0.5 0.25 0.5
+										}
+
+									}
+
+									DEF transform4 Transform {
+										translation	0 0 0.5
+										children [ 
+										    Shape {
+											    appearance	Appearance {
+												    material	Material {
+													    diffuseColor	0 1 0
+												    }
+
+											    }
+
+											    geometry	Box {
+												    size	0.5 0.25 0.5
+											    }
+
+										    }
+
+										    DEF transform5 Transform {
+											    translation	-0.5 0 -0.5
+											    children [ 
+												Shape {
+													appearance	Appearance {
+														material	Material {
+															diffuseColor	0 1 0
+														}
+
+													}
+
+													geometry	Box {
+														size	0.5 0.25 0.5
+													}
+
+												}
+
+												DEF transform6 Transform {
+													translation	0 0 0.5
+													children [ 
+													    Shape {
+														    appearance	Appearance {
+															    material	Material {
+																    diffuseColor	0 1 0
+															    }
+
+														    }
+
+														    geometry	Box {
+															    size	0.5 0.25 0.5
+														    }
+
+													    }
+
+													    DEF transform7 Transform {
+														    translation	1 0 0
+														    children Shape {
+															    appearance	Appearance {
+																    material	Material {
+																	    diffuseColor	0 1 0
+																    }
+
+															    }
+
+															    geometry	Box {
+																    size	0.5 0.25 0.5
+															    }
+
+														    }
+													    }
+													]
+												}
+											    ]
+										    }
+										]
+									}
+								    ]
+							    }
+							]
+						}
+					    ]
+				    }
+				]
+			}
+		    ]
+	    }
+
+	    DEF cover Transform {
+		    translation	0 -90 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    diffuseColor	0 0 0
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	120 2 120
+			    }
+
+		    }
+	    }
+
+	    DEF fr1 Transform {
+		    translation	0 0 0
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+					}
+
+				}
+
+				geometry	Sphere {
+					radius	0.02
+				}
+
+			}
+
+			DEF x Transform {
+				translation	-0.25 0 0
+				rotation	0 0 1  1.5708
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	1 0 0
+						    }
+
+					    }
+
+					    geometry	Cylinder {
+						    height	0.5
+						    radius	0.02
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0.3 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+								    diffuseColor	1 0 0
+							    }
+
+						    }
+
+						    geometry	Cone {
+							    bottomRadius	0.03
+							    height	0.1
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF y Transform {
+				translation	0 0 0.25
+				rotation	1 0 0  1.5708
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0 1 0
+						    }
+
+					    }
+
+					    geometry	Cylinder {
+						    height	0.5
+						    radius	0.02
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0.3 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+								    diffuseColor	0 1 0
+							    }
+
+						    }
+
+						    geometry	Cone {
+							    bottomRadius	0.03
+							    height	0.1
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF z Transform {
+				translation	0 0.25 0
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0 0 1
+						    }
+
+					    }
+
+					    geometry	Cylinder {
+						    height	0.5
+						    radius	0.02
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0.3 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+								    diffuseColor	0 0 1
+							    }
+
+						    }
+
+						    geometry	Cone {
+							    bottomRadius	0.03
+							    height	0.1
+						    }
+
+					    }
+				    }
+				]
+			}
+		    ]
+	    }
+
+	    DEF fr2 Transform {
+		    translation	0 0 0
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+					}
+
+				}
+
+				geometry	Sphere {
+					radius	0.02
+				}
+
+			}
+
+			DEF x Transform {
+				translation	-0.25 0 0
+				rotation	0 0 1  1.5708
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	1 0 0
+						    }
+
+					    }
+
+					    geometry	Cylinder {
+						    height	0.5
+						    radius	0.02
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0.3 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+								    diffuseColor	1 0 0
+							    }
+
+						    }
+
+						    geometry	Cone {
+							    bottomRadius	0.03
+							    height	0.1
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF y Transform {
+				translation	0 0 0.25
+				rotation	1 0 0  1.5708
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0 1 0
+						    }
+
+					    }
+
+					    geometry	Cylinder {
+						    height	0.5
+						    radius	0.02
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0.3 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+								    diffuseColor	0 1 0
+							    }
+
+						    }
+
+						    geometry	Cone {
+							    bottomRadius	0.03
+							    height	0.1
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF z Transform {
+				translation	0 0.25 0
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0 0 1
+						    }
+
+					    }
+
+					    geometry	Cylinder {
+						    height	0.5
+						    radius	0.02
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0.3 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+								    diffuseColor	0 0 1
+							    }
+
+						    }
+
+						    geometry	Cone {
+							    bottomRadius	0.03
+							    height	0.1
+						    }
+
+					    }
+				    }
+				]
+			}
+		    ]
+	    }
+
+	    DEF fr3 Transform {
+		    translation	0 0 0
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+					}
+
+				}
+
+				geometry	Sphere {
+					radius	0.02
+				}
+
+			}
+
+			DEF x Transform {
+				translation	-0.25 0 0
+				rotation	0 0 1  1.5708
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	1 0 0
+						    }
+
+					    }
+
+					    geometry	Cylinder {
+						    height	0.5
+						    radius	0.02
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0.3 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+								    diffuseColor	1 0 0
+							    }
+
+						    }
+
+						    geometry	Cone {
+							    bottomRadius	0.03
+							    height	0.1
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF y Transform {
+				translation	0 0 0.25
+				rotation	1 0 0  1.5708
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0 1 0
+						    }
+
+					    }
+
+					    geometry	Cylinder {
+						    height	0.5
+						    radius	0.02
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0.3 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+								    diffuseColor	0 1 0
+							    }
+
+						    }
+
+						    geometry	Cone {
+							    bottomRadius	0.03
+							    height	0.1
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF z Transform {
+				translation	0 0.25 0
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0 0 1
+						    }
+
+					    }
+
+					    geometry	Cylinder {
+						    height	0.5
+						    radius	0.02
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0.3 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+								    diffuseColor	0 0 1
+							    }
+
+						    }
+
+						    geometry	Cone {
+							    bottomRadius	0.03
+							    height	0.1
+						    }
+
+					    }
+				    }
+				]
+			}
+		    ]
+	    }
+
+	    DEF fr4 Transform {
+		    translation	0 0 0
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+					}
+
+				}
+
+				geometry	Sphere {
+					radius	0.02
+				}
+
+			}
+
+			DEF x Transform {
+				translation	-0.25 0 0
+				rotation	0 0 1  1.5708
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	1 0 0
+						    }
+
+					    }
+
+					    geometry	Cylinder {
+						    height	0.5
+						    radius	0.02
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0.3 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+								    diffuseColor	1 0 0
+							    }
+
+						    }
+
+						    geometry	Cone {
+							    bottomRadius	0.03
+							    height	0.1
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF y Transform {
+				translation	0 0 0.25
+				rotation	1 0 0  1.5708
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0 1 0
+						    }
+
+					    }
+
+					    geometry	Cylinder {
+						    height	0.5
+						    radius	0.02
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0.3 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+								    diffuseColor	0 1 0
+							    }
+
+						    }
+
+						    geometry	Cone {
+							    bottomRadius	0.03
+							    height	0.1
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF z Transform {
+				translation	0 0.25 0
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0 0 1
+						    }
+
+					    }
+
+					    geometry	Cylinder {
+						    height	0.5
+						    radius	0.02
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0.3 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+								    diffuseColor	0 0 1
+							    }
+
+						    }
+
+						    geometry	Cone {
+							    bottomRadius	0.03
+							    height	0.1
+						    }
+
+					    }
+				    }
+				]
+			}
+		    ]
+	    }
+
+	    DEF fr5 Transform {
+		    translation	0 0 0
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+					}
+
+				}
+
+				geometry	Sphere {
+					radius	0.02
+				}
+
+			}
+
+			DEF x Transform {
+				translation	-0.25 0 0
+				rotation	0 0 1  1.5708
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	1 0 0
+						    }
+
+					    }
+
+					    geometry	Cylinder {
+						    height	0.5
+						    radius	0.02
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0.3 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+								    diffuseColor	1 0 0
+							    }
+
+						    }
+
+						    geometry	Cone {
+							    bottomRadius	0.03
+							    height	0.1
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF y Transform {
+				translation	0 0 0.25
+				rotation	1 0 0  1.5708
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0 1 0
+						    }
+
+					    }
+
+					    geometry	Cylinder {
+						    height	0.5
+						    radius	0.02
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0.3 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+								    diffuseColor	0 1 0
+							    }
+
+						    }
+
+						    geometry	Cone {
+							    bottomRadius	0.03
+							    height	0.1
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF z Transform {
+				translation	0 0.25 0
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0 0 1
+						    }
+
+					    }
+
+					    geometry	Cylinder {
+						    height	0.5
+						    radius	0.02
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0.3 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+								    diffuseColor	0 0 1
+							    }
+
+						    }
+
+						    geometry	Cone {
+							    bottomRadius	0.03
+							    height	0.1
+						    }
+
+					    }
+				    }
+				]
+			}
+		    ]
+	    }
+
+	    DEF fr6 Transform {
+		    translation	0 0 0
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+					}
+
+				}
+
+				geometry	Sphere {
+					radius	0.02
+				}
+
+			}
+
+			DEF x Transform {
+				translation	-0.25 0 0
+				rotation	0 0 1  1.5708
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	1 0 0
+						    }
+
+					    }
+
+					    geometry	Cylinder {
+						    height	0.5
+						    radius	0.02
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0.3 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+								    diffuseColor	1 0 0
+							    }
+
+						    }
+
+						    geometry	Cone {
+							    bottomRadius	0.03
+							    height	0.1
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF y Transform {
+				translation	0 0 0.25
+				rotation	1 0 0  1.5708
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0 1 0
+						    }
+
+					    }
+
+					    geometry	Cylinder {
+						    height	0.5
+						    radius	0.02
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0.3 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+								    diffuseColor	0 1 0
+							    }
+
+						    }
+
+						    geometry	Cone {
+							    bottomRadius	0.03
+							    height	0.1
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF z Transform {
+				translation	0 0.25 0
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0 0 1
+						    }
+
+					    }
+
+					    geometry	Cylinder {
+						    height	0.5
+						    radius	0.02
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0.3 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+								    diffuseColor	0 0 1
+							    }
+
+						    }
+
+						    geometry	Cone {
+							    bottomRadius	0.03
+							    height	0.1
+						    }
+
+					    }
+				    }
+				]
+			}
+		    ]
+	    }
+
+	    DEF fr7 Transform {
+		    translation	0 0 0
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+					}
+
+				}
+
+				geometry	Sphere {
+					radius	0.02
+				}
+
+			}
+
+			DEF x Transform {
+				translation	-0.25 0 0
+				rotation	0 0 1  1.5708
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	1 0 0
+						    }
+
+					    }
+
+					    geometry	Cylinder {
+						    height	0.5
+						    radius	0.02
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0.3 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+								    diffuseColor	1 0 0
+							    }
+
+						    }
+
+						    geometry	Cone {
+							    bottomRadius	0.03
+							    height	0.1
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF y Transform {
+				translation	0 0 0.25
+				rotation	1 0 0  1.5708
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0 1 0
+						    }
+
+					    }
+
+					    geometry	Cylinder {
+						    height	0.5
+						    radius	0.02
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0.3 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+								    diffuseColor	0 1 0
+							    }
+
+						    }
+
+						    geometry	Cone {
+							    bottomRadius	0.03
+							    height	0.1
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF z Transform {
+				translation	0 0.25 0
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0 0 1
+						    }
+
+					    }
+
+					    geometry	Cylinder {
+						    height	0.5
+						    radius	0.02
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0.3 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+								    diffuseColor	0 0 1
+							    }
+
+						    }
+
+						    geometry	Cone {
+							    bottomRadius	0.03
+							    height	0.1
+						    }
+
+					    }
+				    }
+				]
+			}
+		    ]
+	    }
+
+	    DEF fr8 Transform {
+		    translation	0 0 0
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+					}
+
+				}
+
+				geometry	Sphere {
+					radius	0.02
+				}
+
+			}
+
+			DEF x Transform {
+				translation	-0.25 0 0
+				rotation	0 0 1  1.5708
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	1 0 0
+						    }
+
+					    }
+
+					    geometry	Cylinder {
+						    height	0.5
+						    radius	0.02
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0.3 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+								    diffuseColor	1 0 0
+							    }
+
+						    }
+
+						    geometry	Cone {
+							    bottomRadius	0.03
+							    height	0.1
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF y Transform {
+				translation	0 0 0.25
+				rotation	1 0 0  1.5708
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0 1 0
+						    }
+
+					    }
+
+					    geometry	Cylinder {
+						    height	0.5
+						    radius	0.02
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0.3 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+								    diffuseColor	0 1 0
+							    }
+
+						    }
+
+						    geometry	Cone {
+							    bottomRadius	0.03
+							    height	0.1
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF z Transform {
+				translation	0 0.25 0
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0 0 1
+						    }
+
+					    }
+
+					    geometry	Cylinder {
+						    height	0.5
+						    radius	0.02
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0.3 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+								    diffuseColor	0 0 1
+							    }
+
+						    }
+
+						    geometry	Cone {
+							    bottomRadius	0.03
+							    height	0.1
+						    }
+
+					    }
+				    }
+				]
+			}
+		    ]
+	    }
+
+	    DEF co1 Transform {
+		    translation	0 -200 0
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+					}
+
+				}
+
+				geometry	Sphere {
+					radius	0.01
+				}
+
+			}
+
+			DEF c1 Transform {
+				translation	0 0 0
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							diffuseColor	1 0 0
+						}
+
+					}
+
+					geometry	Cone {
+						bottomRadius	0.3
+						height	0.5
+					}
+
+				}
+			}
+		    ]
+	    }
+
+	    DEF co2 Transform {
+		    translation	0 -200 0
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+						diffuseColor	0 0 0
+					}
+
+				}
+
+				geometry	Sphere {
+					radius	0.01
+				}
+
+			}
+
+			DEF c2 Transform {
+				translation	0 0 0
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							diffuseColor	0 1 0
+						}
+
+					}
+
+					geometry	Cone {
+						bottomRadius	0.3
+						height	0.5
+					}
+
+				}
+			}
+		    ]
+	    }
+
+	    DEF co3 Transform {
+		    translation	0 -200 0
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+					}
+
+				}
+
+				geometry	Sphere {
+					radius	0.01
+				}
+
+			}
+
+			DEF c3 Transform {
+				translation	0 0 0
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							diffuseColor	0 0 1
+						}
+
+					}
+
+					geometry	Cone {
+						bottomRadius	0.3
+						height	0.5
+					}
+
+				}
+			}
+		    ]
+	    }
+
+	    DEF co4 Transform {
+		    translation	0 -200 0
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+					}
+
+				}
+
+				geometry	Sphere {
+					radius	0.01
+				}
+
+			}
+
+			DEF c4 Transform {
+				translation	0 0 0
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							diffuseColor	0.897481 0.9 0.307671
+						}
+
+					}
+
+					geometry	Cone {
+						bottomRadius	0.3
+						height	0.5
+					}
+
+				}
+			}
+		    ]
+	    }
+
+	    DEF co5 Transform {
+		    translation	0 -200 0
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+					}
+
+				}
+
+				geometry	Sphere {
+					radius	0.01
+				}
+
+			}
+
+			DEF c5 Transform {
+				translation	0 0 0
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							diffuseColor	0.05 0.9 0.8
+						}
+
+					}
+
+					geometry	Cone {
+						bottomRadius	0.3
+						height	0.5
+					}
+
+				}
+			}
+		    ]
+	    }
+
+	    DEF sp1 Transform {
+		    translation	0 -200 0
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+					}
+
+				}
+
+				geometry	Sphere {
+					radius	0.01
+				}
+
+			}
+
+			DEF s1 Transform {
+				translation	0 0 0
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							diffuseColor	1 0 0
+						}
+
+					}
+
+					geometry	Sphere {
+						radius	0.15
+					}
+
+				}
+			}
+		    ]
+	    }
+
+	    DEF sp2 Transform {
+		    translation	0 -200 0
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+					}
+
+				}
+
+				geometry	Sphere {
+					radius	0.01
+				}
+
+			}
+
+			DEF s2 Transform {
+				translation	0 0 0
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							diffuseColor	0 1 0
+						}
+
+					}
+
+					geometry	Sphere {
+						radius	0.15
+					}
+
+				}
+			}
+		    ]
+	    }
+
+	    DEF sp3 Transform {
+		    translation	0 -200 0
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+					}
+
+				}
+
+				geometry	Sphere {
+					radius	0.01
+				}
+
+			}
+
+			DEF s3 Transform {
+				translation	0 0 0
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							diffuseColor	0 0 1
+						}
+
+					}
+
+					geometry	Sphere {
+						radius	0.15
+					}
+
+				}
+			}
+		    ]
+	    }
+
+	    DEF sp4 Transform {
+		    translation	0 -200 0
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+					}
+
+				}
+
+				geometry	Sphere {
+					radius	0.01
+				}
+
+			}
+
+			DEF s4 Transform {
+				translation	0 0 0
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							diffuseColor	0.994591 1 0.296288
+						}
+
+					}
+
+					geometry	Sphere {
+						radius	0.15
+					}
+
+				}
+			}
+		    ]
+	    }
+
+	    DEF sp5 Transform {
+		    translation	0 -200 0
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+					}
+
+				}
+
+				geometry	Sphere {
+					radius	0.01
+				}
+
+			}
+
+			DEF s5 Transform {
+				translation	0 0 0
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							diffuseColor	0.05 0.9 0.8
+						}
+
+					}
+
+					geometry	Sphere {
+						radius	0.15
+					}
+
+				}
+			}
+		    ]
+	    }
+
+	    DEF cy2 Transform {
+		    translation	0.4 -200 -0.4
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    diffuseColor	0.8 0.794443 0.287597
+				    }
+
+			    }
+
+			    geometry	Cylinder {
+				    height	0.5
+				    radius	0.1
+			    }
+
+		    }
+	    }
+
+	    DEF cb2 Transform {
+		    translation	0.4 -200 -0.4
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    diffuseColor	0.00267 0.168919 0.8
+				    }
+
+			    }
+
+			    geometry	Cylinder {
+				    height	0.5
+				    radius	0.1
+			    }
+
+		    }
+	    }
+
+	    DEF cg2 Transform {
+		    translation	0.4 -200 -0.4
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    diffuseColor	0.0956848 0.8 0.282788
+				    }
+
+			    }
+
+			    geometry	Cylinder {
+				    height	0.5
+				    radius	0.1
+			    }
+
+		    }
+	    }
+
+	    DEF cr2 Transform {
+		    translation	0.4 -200 -0.4
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    diffuseColor	0.8 0.0324794 0.0480713
+				    }
+
+			    }
+
+			    geometry	Cylinder {
+				    height	0.5
+				    radius	0.1
+			    }
+
+		    }
+	    }
+	]
+}
+DEF Viewpoint_on_top Viewpoint {
+	fieldOfView	0.785398
+	orientation	-1 0 0  1.54734
+	position	-2 16 0
+	description	"on top"
+}
+DEF Viewpoint_back Viewpoint {
+	orientation	0 -1 0  0.385211
+	position	-6.83113 4.39861 12.0916
+	description	"back diagonal"
+}
+DEF TBase Transform {
+	translation	0 0 0
+	children [ 
+	    DEF TJ1 Transform {
+		    translation	0 2.54 0
+		    children [ 
+			DEF TJ2 Transform {
+				translation	-2.25 0 0
+				children [ 
+				    DEF TJ3 Transform {
+					    translation	-1.25 0 0
+					    children [ 
+						DEF Tarp Transform {
+							translation	0 -0.35 0
+							children [ 
+							    DEF Arpagi_base Transform {
+								    translation	0 0.35 0
+								    children [ 
+									Shape {
+										appearance	Appearance {
+											material	Material {
+												ambientIntensity	0.2
+												diffuseColor	0.8 0.7798 0.541855
+											}
+
+										}
+
+										geometry	Cylinder {
+											height	0.01
+											radius	0.38
+											bottom	TRUE
+										}
+
+									}
+
+									DEF arpagi Transform {
+										translation	0 0 0
+										children [ 
+										    Shape {
+											    appearance	Appearance {
+												    material	Material {
+													    diffuseColor	0.771811 0.8 0.551322
+												    }
+
+											    }
+
+											    geometry	Cylinder {
+												    height	0.7
+												    radius	0.1
+											    }
+
+										    }
+
+										    Transform {
+											    translation	-0.1 0 0
+											    children Shape {
+												    appearance	Appearance {
+													    material	Material {
+														    diffuseColor	0 0 0
+													    }
+
+												    }
+
+												    geometry	Sphere {
+													    radius	0.02
+												    }
+
+											    }
+										    }
+
+										    Transform {
+											    translation	-0.1 -0.2 0
+											    children Shape {
+												    appearance	Appearance {
+													    material	Material {
+													    }
+
+												    }
+
+												    geometry	Sphere {
+													    radius	0.02
+												    }
+
+											    }
+										    }
+										]
+									}
+
+									DEF y-axis Transform {
+										translation	0 0.6 0
+										children Shape {
+											appearance	Appearance {
+												material	Material {
+													diffuseColor	0.0482701 0.103151 0.8
+												}
+
+											}
+
+											geometry	Cylinder {
+												radius	0.02
+											}
+
+										}
+									}
+
+									DEF x-axis Transform {
+										translation	-0.504421 -0.349814 4.84288e-008
+										rotation	0 0 1  1.5708
+										children [ 
+										    Shape {
+											    appearance	Appearance {
+												    material	Material {
+													    diffuseColor	0.8 0.133723 0.0241891
+												    }
+
+											    }
+
+											    geometry	Cylinder {
+												    height	1
+												    radius	0.02
+											    }
+
+										    }
+
+										    Transform {
+											    translation	0 0.5 0
+											    children Shape {
+												    appearance	Appearance {
+													    material	Material {
+														    diffuseColor	0.8 0.0163265 0.0163265
+													    }
+
+												    }
+
+												    geometry	Cone {
+													    bottomRadius	0.05
+													    height	0.2
+												    }
+
+											    }
+										    }
+										]
+									}
+
+									DEF z-axis Transform {
+										translation	0 -0.35 0.5
+										rotation	1 0 0  1.5708
+										children [ 
+										    Shape {
+											    appearance	Appearance {
+												    material	Material {
+													    diffuseColor	0.227668 0.8 0.0665771
+												    }
+
+											    }
+
+											    geometry	Cylinder {
+												    height	1
+												    radius	0.02
+											    }
+
+										    }
+
+										    Transform {
+											    translation	0 0.5 0
+											    children Shape {
+												    appearance	Appearance {
+													    material	Material {
+														    diffuseColor	0.143796 0.8 0.0298791
+													    }
+
+												    }
+
+												    geometry	Cone {
+													    bottomRadius	0.05
+													    height	0.2
+												    }
+
+											    }
+										    }
+										]
+									}
+								    ]
+							    }
+
+							    DEF gra Transform {
+								    translation	0 -200 0
+								    children [ 
+									Shape {
+										appearance	Appearance {
+											material	Material {
+											}
+
+										}
+
+										geometry	Sphere {
+											radius	0.01
+										}
+
+									}
+
+									DEF transform Transform {
+										translation	0 0 0
+										rotation	1 0 0  1.5708
+										children Shape {
+											appearance	Appearance {
+												material	Material {
+													diffuseColor	1 1 0
+												}
+
+											}
+
+											geometry	Cylinder {
+												height	2
+												radius	0.01
+											}
+
+										}
+									}
+
+									DEF transform1 Transform {
+										translation	-1 0 0
+										rotation	1 0 0  1.5708
+										children Shape {
+											appearance	Appearance {
+												material	Material {
+													diffuseColor	1 1 0
+												}
+
+											}
+
+											geometry	Cylinder {
+												height	2
+												radius	0.01
+											}
+
+										}
+									}
+
+									DEF transform_1 Transform {
+										translation	1 0 0
+										rotation	1 0 0  1.5708
+										children Shape {
+											appearance	Appearance {
+												material	Material {
+													diffuseColor	1 1 0
+												}
+
+											}
+
+											geometry	Cylinder {
+												height	2
+												radius	0.01
+											}
+
+										}
+									}
+
+									DEF hor Transform {
+										translation	0 0 0
+										rotation	0 0 1  1.5708
+										children Shape {
+											appearance	Appearance {
+												material	Material {
+													diffuseColor	1 1 0
+												}
+
+											}
+
+											geometry	Cylinder {
+												height	2
+												radius	0.01
+											}
+
+										}
+									}
+
+									DEF hor1 Transform {
+										translation	0 0 1
+										rotation	0 0 1  1.5708
+										children Shape {
+											appearance	Appearance {
+												material	Material {
+													diffuseColor	1 1 0
+												}
+
+											}
+
+											geometry	Cylinder {
+												height	2
+												radius	0.01
+											}
+
+										}
+									}
+
+									DEF hor_1 Transform {
+										translation	0 0 -1
+										rotation	0 0 1  1.5708
+										children Shape {
+											appearance	Appearance {
+												material	Material {
+													diffuseColor	1 1 0
+												}
+
+											}
+
+											geometry	Cylinder {
+												height	2
+												radius	0.01
+											}
+
+										}
+									}
+
+									DEF transform05 Transform {
+										translation	0.5 0 0
+										rotation	1 0 0  1.5708
+										children Shape {
+											appearance	Appearance {
+												material	Material {
+													diffuseColor	1 1 0
+												}
+
+											}
+
+											geometry	Cylinder {
+												height	2
+												radius	0.01
+											}
+
+										}
+									}
+
+									DEF transform_05 Transform {
+										translation	-0.5 0 0
+										rotation	1 0 0  1.5708
+										children Shape {
+											appearance	Appearance {
+												material	Material {
+													diffuseColor	1 1 0
+												}
+
+											}
+
+											geometry	Cylinder {
+												height	2
+												radius	0.01
+											}
+
+										}
+									}
+
+									DEF hor05 Transform {
+										translation	0 0 0.5
+										rotation	0 0 1  1.5708
+										children Shape {
+											appearance	Appearance {
+												material	Material {
+													diffuseColor	1 1 0
+												}
+
+											}
+
+											geometry	Cylinder {
+												height	2
+												radius	0.01
+											}
+
+										}
+									}
+
+									DEF hor_05 Transform {
+										translation	0 0 -0.5
+										rotation	0 0 1  1.5708
+										children Shape {
+											appearance	Appearance {
+												material	Material {
+													diffuseColor	1 1 0
+												}
+
+											}
+
+											geometry	Cylinder {
+												height	2
+												radius	0.01
+											}
+
+										}
+									}
+								    ]
+							    }
+
+							    DEF ga2 Transform {
+								    translation	0 -200 0
+								    children [ 
+									Shape {
+										appearance	Appearance {
+											material	Material {
+											}
+
+										}
+
+										geometry	Sphere {
+											radius	0.01
+										}
+
+									}
+
+									DEF transform Transform {
+										translation	0.25 0 0
+										rotation	1 0 0  1.5708
+										children Shape {
+											appearance	Appearance {
+												material	Material {
+													diffuseColor	1 1 0
+												}
+
+											}
+
+											geometry	Cylinder {
+												height	2
+												radius	0.01
+											}
+
+										}
+									}
+
+									DEF transform1 Transform {
+										translation	-0.75 0 0
+										rotation	1 0 0  1.5708
+										children Shape {
+											appearance	Appearance {
+												material	Material {
+													diffuseColor	1 1 0
+												}
+
+											}
+
+											geometry	Cylinder {
+												height	2
+												radius	0.01
+											}
+
+										}
+									}
+
+									DEF transform_1 Transform {
+										translation	0.75 0 0
+										rotation	1 0 0  1.5708
+										children Shape {
+											appearance	Appearance {
+												material	Material {
+													diffuseColor	1 1 0
+												}
+
+											}
+
+											geometry	Cylinder {
+												height	2
+												radius	0.01
+											}
+
+										}
+									}
+
+									DEF hor Transform {
+										translation	0 0 0.25
+										rotation	0 0 1  1.5708
+										children Shape {
+											appearance	Appearance {
+												material	Material {
+													diffuseColor	1 1 0
+												}
+
+											}
+
+											geometry	Cylinder {
+												height	2
+												radius	0.01
+											}
+
+										}
+									}
+
+									DEF hor1 Transform {
+										translation	0 0 0.75
+										rotation	0 0 1  1.5708
+										children Shape {
+											appearance	Appearance {
+												material	Material {
+													diffuseColor	1 1 0
+												}
+
+											}
+
+											geometry	Cylinder {
+												height	2
+												radius	0.01
+											}
+
+										}
+									}
+
+									DEF hor_1 Transform {
+										translation	0 0 -0.75
+										rotation	0 0 1  1.5708
+										children Shape {
+											appearance	Appearance {
+												material	Material {
+													diffuseColor	1 1 0
+												}
+
+											}
+
+											geometry	Cylinder {
+												height	2
+												radius	0.01
+											}
+
+										}
+									}
+
+									DEF transform05 Transform {
+										translation	-0.25 0 0
+										rotation	1 0 0  1.5708
+										children Shape {
+											appearance	Appearance {
+												material	Material {
+													diffuseColor	1 1 0
+												}
+
+											}
+
+											geometry	Cylinder {
+												height	2
+												radius	0.01
+											}
+
+										}
+									}
+
+									DEF hor_05 Transform {
+										translation	0 0 -0.25
+										rotation	0 0 1  1.5708
+										children Shape {
+											appearance	Appearance {
+												material	Material {
+													diffuseColor	1 1 0
+												}
+
+											}
+
+											geometry	Cylinder {
+												height	2
+												radius	0.01
+											}
+
+										}
+									}
+								    ]
+							    }
+							]
+						}
+
+						DEF Joint3 Transform {
+							translation	0 1.66 5.21541e-008
+							children [ 
+							    Shape {
+								    appearance	Appearance {
+									    material	Material {
+										    diffuseColor	0.8 0.15935 0.112539
+									    }
+
+								    }
+
+								    geometry	Cylinder {
+									    height	3.32
+									    radius	0.24
+								    }
+
+							    }
+
+							    Transform {
+								    translation	-0.24 -1.6 0
+								    children Shape {
+									    appearance	Appearance {
+										    material	Material {
+										    }
+
+									    }
+
+									    geometry	Sphere {
+										    radius	0.02
+									    }
+
+								    }
+							    }
+							]
+						}
+
+						DEF TJ4 Transform {
+							translation	0 0 0
+							children []
+						}
+					    ]
+				    }
+
+				    DEF Joint2 Transform {
+					    translation	-1.0252e-005 5.24521e-006 7.10543e-014
+					    children [ 
+						Shape {
+							appearance	Appearance {
+								material	Material {
+									diffuseColor	0.7 0.1 0.1
+								}
+
+							}
+
+							geometry	Cylinder {
+								height	0.56
+								radius	0.5
+							}
+
+						}
+
+						DEF Link2 Transform {
+							translation	-0.2 1.1 0
+							children [ 
+							    Shape {
+								    appearance	Appearance {
+									    material	Material {
+										    diffuseColor	0.613807 0.733745 0.78
+									    }
+
+								    }
+
+								    geometry	Box {
+									    size	1 1.7 1.4
+								    }
+
+							    }
+
+							    DEF Link2_edge Transform {
+								    translation	-0.6 0 0
+								    scale	1.5 1 1
+								    children Shape {
+									    appearance	Appearance {
+										    material	Material {
+											    ambientIntensity	0.2
+											    diffuseColor	0.601379 0.768676 0.8
+										    }
+
+									    }
+
+									    geometry	Cylinder {
+										    height	1.7
+										    radius	0.7
+									    }
+
+								    }
+							    }
+							]
+						}
+					    ]
+				    }
+
+				    DEF wire_to_link2 Transform {
+					    translation	0 2 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+							    }
+
+						    }
+
+						    geometry	Cylinder {
+							    height	0.2
+							    radius	0.25
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF Joint1 Transform {
+				translation	-4.09782e-006 -3.9339e-006 0
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0.7 0.1 0.1
+						    }
+
+					    }
+
+					    geometry	Cylinder {
+						    height	0.56
+						    radius	0.5
+					    }
+
+				    }
+
+				    DEF Link1 Transform {
+					    translation	-1.15 -1.43051e-006 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+								    diffuseColor	1 0.496804 0.25
+							    }
+
+						    }
+
+						    geometry	Box {
+							    size	2.19 0.5 1
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF Wire_finish Transform {
+				translation	0.9 0.6 0
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0.9 0.716574 0.415088
+						    }
+
+					    }
+
+					    geometry	Cylinder {
+						    radius	0.28
+					    }
+
+				    }
+
+				    DEF Cone Transform {
+					    translation	0 -1.1 0
+					    rotation	1 0 0  3.14159
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+								    diffuseColor	0.8 0.701871 0.407484
+							    }
+
+						    }
+
+						    geometry	Cone {
+							    bottomRadius	0.28
+							    height	0.3
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF TWire Transform {
+				translation	0.9 2.1 0
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0.765583 0.8 0.763493
+						    }
+
+					    }
+
+					    geometry	Cylinder {
+						    height	1.5
+						    radius	0.2
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 0.75 0
+					    rotation	0 0 1  0.0942483
+					    children [ 
+						Shape {
+							appearance	Appearance {
+								material	Material {
+								}
+
+							}
+
+							geometry	Cylinder {
+								height	0.1
+								radius	0.2
+							}
+
+						}
+
+						Transform {
+							translation	0 0.095 0
+							rotation	0 0 1  0.0628336
+							children [ 
+							    Shape {
+								    appearance	Appearance {
+									    material	Material {
+									    }
+
+								    }
+
+								    geometry	Cylinder {
+									    height	0.1
+									    radius	0.2
+								    }
+
+							    }
+
+							    Transform {
+								    translation	0 0.08 0
+								    rotation	0 0 1  0.0942483
+								    children [ 
+									Shape {
+										appearance	Appearance {
+											material	Material {
+											}
+
+										}
+
+										geometry	Cylinder {
+											height	0.1
+											radius	0.2
+										}
+
+									}
+
+									Transform {
+										translation	0 0.08 0
+										rotation	0 0 1  0.125664
+										children [ 
+										    Shape {
+											    appearance	Appearance {
+												    material	Material {
+												    }
+
+											    }
+
+											    geometry	Cylinder {
+												    height	0.1
+												    radius	0.2
+											    }
+
+										    }
+
+										    Transform {
+											    translation	0 0.08 0
+											    rotation	0 0 1  0.125664
+											    children [ 
+												Shape {
+													appearance	Appearance {
+														material	Material {
+														}
+
+													}
+
+													geometry	Cylinder {
+														height	0.1
+														radius	0.2
+													}
+
+												}
+
+												Transform {
+													translation	0 0.08 0
+													rotation	0 0 1  0.125664
+													children [ 
+													    Shape {
+														    appearance	Appearance {
+															    material	Material {
+															    }
+
+														    }
+
+														    geometry	Cylinder {
+															    height	0.1
+															    radius	0.2
+														    }
+
+													    }
+
+													    Transform {
+														    translation	0 0.08 0
+														    children [ 
+															Shape {
+																appearance	Appearance {
+																	material	Material {
+																	}
+
+																}
+
+																geometry	Cylinder {
+																	height	0.1
+																	radius	0.2
+																}
+
+															}
+
+															Transform {
+																translation	-1.81431e-006 0.0800001 -7.45019e-008
+																rotation	0 0 1  0.125664
+																children [ 
+																    Shape {
+																	    appearance	Appearance {
+																		    material	Material {
+																		    }
+
+																	    }
+
+																	    geometry	Cylinder {
+																		    height	0.1
+																		    radius	0.2
+																	    }
+
+																    }
+
+																    Transform {
+																	    translation	0 0.08 0
+																	    rotation	0 0 1  0.125664
+																	    children [ 
+																		Shape {
+																			appearance	Appearance {
+																				material	Material {
+																				}
+
+																			}
+
+																			geometry	Cylinder {
+																				height	0.1
+																				radius	0.2
+																			}
+
+																		}
+
+																		Transform {
+																			translation	0 0.08 0
+																			rotation	0 0 1  0.0942483
+																			children [ 
+																			    Shape {
+																				    appearance	Appearance {
+																					    material	Material {
+																					    }
+
+																				    }
+
+																				    geometry	Cylinder {
+																					    height	0.1
+																					    radius	0.2
+																				    }
+
+																			    }
+
+																			    Transform {
+																				    translation	0 0.08 0
+																				    rotation	0 0 1  0.125664
+																				    children [ 
+																					Shape {
+																						appearance	Appearance {
+																							material	Material {
+																							}
+
+																						}
+
+																						geometry	Cylinder {
+																							height	0.1
+																							radius	0.2
+																						}
+
+																					}
+
+																					Transform {
+																						translation	0 0.08 0
+																						rotation	0 0 1  0.125664
+																						children [ 
+																						    Shape {
+																							    appearance	Appearance {
+																								    material	Material {
+																								    }
+
+																							    }
+
+																							    geometry	Cylinder {
+																								    height	0.1
+																								    radius	0.2
+																							    }
+
+																						    }
+
+																						    Transform {
+																							    translation	0 0.1 0
+																							    children [ 
+																								Shape {
+																									appearance	Appearance {
+																										material	Material {
+																										}
+
+																									}
+
+																									geometry	Cylinder {
+																										height	0.1
+																										radius	0.2
+																									}
+
+																								}
+
+																								Transform {
+																									translation	0 0.1 0
+																									children [ 
+																									    Shape {
+																										    appearance	Appearance {
+																											    material	Material {
+																											    }
+
+																										    }
+
+																										    geometry	Cylinder {
+																											    height	0.1
+																											    radius	0.2
+																										    }
+
+																									    }
+
+																									    Transform {
+																										    translation	0 0.09 0
+																										    rotation	0 0 1  0.0314177
+																										    children [ 
+																											Shape {
+																												appearance	Appearance {
+																													material	Material {
+																													}
+
+																												}
+
+																												geometry	Cylinder {
+																													height	0.1
+																													radius	0.2
+																												}
+
+																											}
+
+																											Transform {
+																												translation	0 0.08 0
+																												rotation	0 0 1  0.0314177
+																												children [ 
+																												    Shape {
+																													    appearance	Appearance {
+																														    material	Material {
+																														    }
+
+																													    }
+
+																													    geometry	Cylinder {
+																														    height	0.1
+																														    radius	0.2
+																													    }
+
+																												    }
+
+																												    Transform {
+																													    translation	0 0.09 0
+																													    rotation	0 0 1  0.0314177
+																													    children [ 
+																														Shape {
+																															appearance	Appearance {
+																																material	Material {
+																																}
+
+																															}
+
+																															geometry	Cylinder {
+																																height	0.1
+																																radius	0.2
+																															}
+
+																														}
+
+																														Transform {
+																															translation	0 0.1 0
+																															children [ 
+																															    Shape {
+																																    appearance	Appearance {
+																																	    material	Material {
+																																	    }
+
+																																    }
+
+																																    geometry	Cylinder {
+																																	    height	0.1
+																																	    radius	0.2
+																																    }
+
+																															    }
+
+																															    Transform {
+																																    translation	0 0.08 0
+																																    rotation	0 0 1  0.0628336
+																																    children [ 
+																																	Shape {
+																																		appearance	Appearance {
+																																			material	Material {
+																																			}
+
+																																		}
+
+																																		geometry	Cylinder {
+																																			height	0.1
+																																			radius	0.2
+																																		}
+
+																																	}
+
+																																	Transform {
+																																		translation	0 0.08 0
+																																		rotation	0 0 1  0.0628336
+																																		children [ 
+																																		    Shape {
+																																			    appearance	Appearance {
+																																				    material	Material {
+																																				    }
+
+																																			    }
+
+																																			    geometry	Cylinder {
+																																				    height	0.1
+																																				    radius	0.2
+																																			    }
+
+																																		    }
+
+																																		    Transform {
+																																			    translation	0 0.08 0
+																																			    children [ 
+																																				Shape {
+																																					appearance	Appearance {
+																																						material	Material {
+																																						}
+
+																																					}
+
+																																					geometry	Cylinder {
+																																						height	0.1
+																																						radius	0.2
+																																					}
+
+																																				}
+
+																																				Transform {
+																																					translation	0 0.08 0
+																																					rotation	0 0 1  0.0942483
+																																					children [ 
+																																					    Shape {
+																																						    appearance	Appearance {
+																																							    material	Material {
+																																							    }
+
+																																						    }
+
+																																						    geometry	Cylinder {
+																																							    height	0.1
+																																							    radius	0.2
+																																						    }
+
+																																					    }
+
+																																					    Transform {
+																																						    translation	0 0.08 0
+																																						    children [ 
+																																							Shape {
+																																								appearance	Appearance {
+																																									material	Material {
+																																									}
+
+																																								}
+
+																																								geometry	Cylinder {
+																																									height	0.1
+																																									radius	0.2
+																																								}
+
+																																							}
+
+																																							Transform {
+																																								translation	0 0.08 0
+																																								children [ 
+																																								    Shape {
+																																									    appearance	Appearance {
+																																										    material	Material {
+																																										    }
+
+																																									    }
+
+																																									    geometry	Cylinder {
+																																										    height	0.1
+																																										    radius	0.2
+																																									    }
+
+																																								    }
+
+																																								    Transform {
+																																									    translation	0 0.08 0
+																																									    rotation	0 0 1  0.125664
+																																									    children [ 
+																																										Shape {
+																																											appearance	Appearance {
+																																												material	Material {
+																																												}
+
+																																											}
+
+																																											geometry	Cylinder {
+																																												height	0.1
+																																												radius	0.2
+																																											}
+
+																																										}
+
+																																										Transform {
+																																											translation	0 0.08 0
+																																											children [ 
+																																											    Shape {
+																																												    appearance	Appearance {
+																																													    material	Material {
+																																													    }
+
+																																												    }
+
+																																												    geometry	Cylinder {
+																																													    height	0.1
+																																													    radius	0.2
+																																												    }
+
+																																											    }
+
+																																											    Transform {
+																																												    translation	0 0.08 0
+																																												    children [ 
+																																													Shape {
+																																														appearance	Appearance {
+																																															material	Material {
+																																															}
+
+																																														}
+
+																																														geometry	Cylinder {
+																																															height	0.1
+																																															radius	0.2
+																																														}
+
+																																													}
+
+																																													Transform {
+																																														translation	0 0.08 0
+																																														rotation	0 0 1  0.0628336
+																																														children [ 
+																																														    Shape {
+																																															    appearance	Appearance {
+																																																    material	Material {
+																																																    }
+
+																																															    }
+
+																																															    geometry	Cylinder {
+																																																    height	0.1
+																																																    radius	0.2
+																																															    }
+
+																																														    }
+
+																																														    Transform {
+																																															    translation	0 0.08 0
+																																															    children [ 
+																																																Shape {
+																																																	appearance	Appearance {
+																																																		material	Material {
+																																																		}
+
+																																																	}
+
+																																																	geometry	Cylinder {
+																																																		height	0.1
+																																																		radius	0.2
+																																																	}
+
+																																																}
+
+																																																Transform {
+																																																	translation	0 0.08 0
+																																																	rotation	0 0 1  0.0628336
+																																																	children [ 
+																																																	    Shape {
+																																																		    appearance	Appearance {
+																																																			    material	Material {
+																																																			    }
+
+																																																		    }
+
+																																																		    geometry	Cylinder {
+																																																			    height	0.1
+																																																			    radius	0.2
+																																																		    }
+
+																																																	    }
+
+																																																	    Transform {
+																																																		    translation	0 0.08 0
+																																																		    rotation	0 0 1  0.0628336
+																																																		    children [ 
+																																																			Shape {
+																																																				appearance	Appearance {
+																																																					material	Material {
+																																																					}
+
+																																																				}
+
+																																																				geometry	Cylinder {
+																																																					height	0.1
+																																																					radius	0.2
+																																																				}
+
+																																																			}
+
+																																																			Transform {
+																																																				translation	0 0.08 0
+																																																				rotation	0 0 1  0.0628336
+																																																				children [ 
+																																																				    Shape {
+																																																					    appearance	Appearance {
+																																																						    material	Material {
+																																																						    }
+
+																																																					    }
+
+																																																					    geometry	Cylinder {
+																																																						    height	0.1
+																																																						    radius	0.2
+																																																					    }
+
+																																																				    }
+
+																																																				    Transform {
+																																																					    translation	0 0.08 0
+																																																					    children [ 
+																																																						Shape {
+																																																							appearance	Appearance {
+																																																								material	Material {
+																																																								}
+
+																																																							}
+
+																																																							geometry	Cylinder {
+																																																								height	0.1
+																																																								radius	0.2
+																																																							}
+
+																																																						}
+
+																																																						Transform {
+																																																							translation	0 0.08 0
+																																																							rotation	0 0 1  0.0628336
+																																																							children [ 
+																																																							    Shape {
+																																																								    appearance	Appearance {
+																																																									    material	Material {
+																																																									    }
+
+																																																								    }
+
+																																																								    geometry	Cylinder {
+																																																									    height	0.1
+																																																									    radius	0.2
+																																																								    }
+
+																																																							    }
+
+																																																							    Transform {
+																																																								    translation	0 0.08 0
+																																																								    children [ 
+																																																									Shape {
+																																																										appearance	Appearance {
+																																																											material	Material {
+																																																											}
+
+																																																										}
+
+																																																										geometry	Cylinder {
+																																																											height	0.1
+																																																											radius	0.2
+																																																										}
+
+																																																									}
+
+																																																									Transform {
+																																																										translation	0 0.08 0
+																																																										rotation	0 0 1  0.0628336
+																																																										children [ 
+																																																										    Shape {
+																																																											    appearance	Appearance {
+																																																												    material	Material {
+																																																												    }
+
+																																																											    }
+
+																																																											    geometry	Cylinder {
+																																																												    height	0.1
+																																																												    radius	0.2
+																																																											    }
+
+																																																										    }
+
+																																																										    Transform {
+																																																											    translation	0 0.08 0
+																																																											    rotation	0 0 1  0.0628336
+																																																											    children [ 
+																																																												Shape {
+																																																													appearance	Appearance {
+																																																														material	Material {
+																																																														}
+
+																																																													}
+
+																																																													geometry	Cylinder {
+																																																														height	0.1
+																																																														radius	0.2
+																																																													}
+
+																																																												}
+
+																																																												Transform {
+																																																													translation	0 0.08 0
+																																																													children [ 
+																																																													    Shape {
+																																																														    appearance	Appearance {
+																																																															    material	Material {
+																																																															    }
+
+																																																														    }
+
+																																																														    geometry	Cylinder {
+																																																															    height	0.1
+																																																															    radius	0.2
+																																																														    }
+
+																																																													    }
+
+																																																													    Transform {
+																																																														    translation	0 0.08 0
+																																																														    rotation	0 0 1  0.178024
+																																																														    children [ 
+																																																															Shape {
+																																																																appearance	Appearance {
+																																																																	material	Material {
+																																																																	}
+
+																																																																}
+
+																																																																geometry	Cylinder {
+																																																																	height	0.1
+																																																																	radius	0.2
+																																																																}
+
+																																																															}
+
+																																																															Transform {
+																																																																translation	0 0.08 0
+																																																																children [ 
+																																																																    Shape {
+																																																																	    appearance	Appearance {
+																																																																		    material	Material {
+																																																																		    }
+
+																																																																	    }
+
+																																																																	    geometry	Cylinder {
+																																																																		    height	0.1
+																																																																		    radius	0.2
+																																																																	    }
+
+																																																																    }
+
+																																																																    Transform {
+																																																																	    translation	0 0.08 0
+																																																																	    rotation	0 0 1  0.0628336
+																																																																	    children [ 
+																																																																		Shape {
+																																																																			appearance	Appearance {
+																																																																				material	Material {
+																																																																				}
+
+																																																																			}
+
+																																																																			geometry	Cylinder {
+																																																																				height	0.1
+																																																																				radius	0.2
+																																																																			}
+
+																																																																		}
+
+																																																																		Transform {
+																																																																			translation	0 0.08 0
+																																																																			rotation	0 0 1  0.125664
+																																																																			children [ 
+																																																																			    Shape {
+																																																																				    appearance	Appearance {
+																																																																					    material	Material {
+																																																																					    }
+
+																																																																				    }
+
+																																																																				    geometry	Cylinder {
+																																																																					    height	0.1
+																																																																					    radius	0.2
+																																																																				    }
+
+																																																																			    }
+
+																																																																			    Transform {
+																																																																				    translation	0 0.08 0
+																																																																				    children [ 
+																																																																					Shape {
+																																																																						appearance	Appearance {
+																																																																							material	Material {
+																																																																							}
+
+																																																																						}
+
+																																																																						geometry	Cylinder {
+																																																																							height	0.1
+																																																																							radius	0.2
+																																																																						}
+
+																																																																					}
+
+																																																																					Transform {
+																																																																						translation	0 0.08 0
+																																																																						rotation	0 0 1  0.0942483
+																																																																						children [ 
+																																																																						    Shape {
+																																																																							    appearance	Appearance {
+																																																																								    material	Material {
+																																																																								    }
+
+																																																																							    }
+
+																																																																							    geometry	Cylinder {
+																																																																								    height	0.1
+																																																																								    radius	0.2
+																																																																							    }
+
+																																																																						    }
+
+																																																																						    Transform {
+																																																																							    translation	0 0.08 0
+																																																																							    rotation	0 0 1  0.0628336
+																																																																							    children [ 
+																																																																								Shape {
+																																																																									appearance	Appearance {
+																																																																										material	Material {
+																																																																										}
+
+																																																																									}
+
+																																																																									geometry	Cylinder {
+																																																																										height	0.1
+																																																																										radius	0.2
+																																																																									}
+
+																																																																								}
+
+																																																																								Transform {
+																																																																									translation	0 0.06 0
+																																																																									children [ 
+																																																																									    Shape {
+																																																																										    appearance	Appearance {
+																																																																											    material	Material {
+																																																																											    }
+
+																																																																										    }
+
+																																																																										    geometry	Cylinder {
+																																																																											    height	0.1
+																																																																											    radius	0.2
+																																																																										    }
+
+																																																																									    }
+
+																																																																									    Transform {
+																																																																										    translation	0 0.08 0
+																																																																										    rotation	0 0 1  0.125664
+																																																																										    children [ 
+																																																																											Shape {
+																																																																												appearance	Appearance {
+																																																																													material	Material {
+																																																																													}
+
+																																																																												}
+
+																																																																												geometry	Cylinder {
+																																																																													height	0.1
+																																																																													radius	0.2
+																																																																												}
+
+																																																																											}
+
+																																																																											Transform {
+																																																																												translation	0 0.08 0
+																																																																												children [ 
+																																																																												    Shape {
+																																																																													    appearance	Appearance {
+																																																																														    material	Material {
+																																																																														    }
+
+																																																																													    }
+
+																																																																													    geometry	Cylinder {
+																																																																														    height	0.1
+																																																																														    radius	0.2
+																																																																													    }
+
+																																																																												    }
+
+																																																																												    Transform {
+																																																																													    translation	0 0.08 0
+																																																																													    rotation	0 0 1  0.0942483
+																																																																													    children [ 
+																																																																														Shape {
+																																																																															appearance	Appearance {
+																																																																																material	Material {
+																																																																																}
+
+																																																																															}
+
+																																																																															geometry	Cylinder {
+																																																																																height	0.1
+																																																																																radius	0.2
+																																																																															}
+
+																																																																														}
+
+																																																																														Transform {
+																																																																															translation	0 0.08 0
+																																																																															rotation	0 0 1  0.0942483
+																																																																															children [ 
+																																																																															    Shape {
+																																																																																    appearance	Appearance {
+																																																																																	    material	Material {
+																																																																																	    }
+
+																																																																																    }
+
+																																																																																    geometry	Cylinder {
+																																																																																	    height	0.1
+																																																																																	    radius	0.2
+																																																																																    }
+
+																																																																															    }
+
+																																																																															    Transform {
+																																																																																    translation	0 0.06 0
+																																																																																    rotation	0 0 1  0.00873465
+																																																																																    children [ 
+																																																																																	Shape {
+																																																																																		appearance	Appearance {
+																																																																																			material	Material {
+																																																																																			}
+
+																																																																																		}
+
+																																																																																		geometry	Cylinder {
+																																																																																			height	0.1
+																																																																																			radius	0.2
+																																																																																		}
+
+																																																																																	}
+
+																																																																																	Transform {
+																																																																																		translation	0 0.06 0
+																																																																																		children [ 
+																																																																																		    Shape {
+																																																																																			    appearance	Appearance {
+																																																																																				    material	Material {
+																																																																																				    }
+
+																																																																																			    }
+
+																																																																																			    geometry	Cylinder {
+																																																																																				    height	0.1
+																																																																																				    radius	0.2
+																																																																																			    }
+
+																																																																																		    }
+
+																																																																																		    Transform {
+																																																																																			    translation	0 0.08 0
+																																																																																			    rotation	0 0 1  0.0314177
+																																																																																			    children [ 
+																																																																																				Shape {
+																																																																																					appearance	Appearance {
+																																																																																						material	Material {
+																																																																																						}
+
+																																																																																					}
+
+																																																																																					geometry	Cylinder {
+																																																																																						height	0.1
+																																																																																						radius	0.2
+																																																																																					}
+
+																																																																																				}
+
+																																																																																				Transform {
+																																																																																					translation	0 0.08 0
+																																																																																					rotation	0 0 1  0.0942483
+																																																																																					children [ 
+																																																																																					    Shape {
+																																																																																						    appearance	Appearance {
+																																																																																							    material	Material {
+																																																																																							    }
+
+																																																																																						    }
+
+																																																																																						    geometry	Cylinder {
+																																																																																							    height	0.1
+																																																																																							    radius	0.2
+																																																																																						    }
+
+																																																																																					    }
+
+																																																																																					    Transform {
+																																																																																						    translation	0 0.08 0
+																																																																																						    children [ 
+																																																																																							Shape {
+																																																																																								appearance	Appearance {
+																																																																																									material	Material {
+																																																																																									}
+
+																																																																																								}
+
+																																																																																								geometry	Cylinder {
+																																																																																									height	0.1
+																																																																																									radius	0.2
+																																																																																								}
+
+																																																																																							}
+
+																																																																																							Transform {
+																																																																																								translation	0 0.19 0
+																																																																																								children Shape {
+																																																																																									appearance	Appearance {
+																																																																																										material	Material {
+																																																																																										}
+
+																																																																																									}
+
+																																																																																									geometry	Cylinder {
+																																																																																										height	0.5
+																																																																																										radius	0.2
+																																																																																									}
+
+																																																																																								}
+																																																																																							}
+																																																																																						    ]
+																																																																																					    }
+																																																																																					]
+																																																																																				}
+																																																																																			    ]
+																																																																																		    }
+																																																																																		]
+																																																																																	}
+																																																																																    ]
+																																																																															    }
+																																																																															]
+																																																																														}
+																																																																													    ]
+																																																																												    }
+																																																																												]
+																																																																											}
+																																																																										    ]
+																																																																									    }
+																																																																									]
+																																																																								}
+																																																																							    ]
+																																																																						    }
+																																																																						]
+																																																																					}
+																																																																				    ]
+																																																																			    }
+																																																																			]
+																																																																		}
+																																																																	    ]
+																																																																    }
+																																																																]
+																																																															}
+																																																														    ]
+																																																													    }
+																																																													]
+																																																												}
+																																																											    ]
+																																																										    }
+																																																										]
+																																																									}
+																																																								    ]
+																																																							    }
+																																																							]
+																																																						}
+																																																					    ]
+																																																				    }
+																																																				]
+																																																			}
+																																																		    ]
+																																																	    }
+																																																	]
+																																																}
+																																															    ]
+																																														    }
+																																														]
+																																													}
+																																												    ]
+																																											    }
+																																											]
+																																										}
+																																									    ]
+																																								    }
+																																								]
+																																							}
+																																						    ]
+																																					    }
+																																					]
+																																				}
+																																			    ]
+																																		    }
+																																		]
+																																	}
+																																    ]
+																															    }
+																															]
+																														}
+																													    ]
+																												    }
+																												]
+																											}
+																										    ]
+																									    }
+																									]
+																								}
+																							    ]
+																						    }
+																						]
+																					}
+																				    ]
+																			    }
+																			]
+																		}
+																	    ]
+																    }
+																]
+															}
+														    ]
+													    }
+													]
+												}
+											    ]
+										    }
+										]
+									}
+								    ]
+							    }
+							]
+						}
+					    ]
+				    }
+				]
+			}
+		    ]
+	    }
+
+	    DEF Cyl_base Transform {
+		    translation	0 1.15 0
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+						diffuseColor	0.98 0.98 0.98
+					}
+
+				}
+
+				geometry	Cylinder {
+					height	2.29
+					radius	0.6
+				}
+
+			}
+
+			DEF Sq_base Transform {
+				translation	0 -1.15 0
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0.66 0.559299 0.479289
+						    }
+
+					    }
+
+					    geometry	Box {
+						    size	1.4 0.05 1.4
+					    }
+
+				    }
+
+				    Transform {
+					    translation	0 -0.5 0
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+							    }
+
+						    }
+
+						    geometry	Box {
+							    size	2 1 2
+						    }
+
+					    }
+				    }
+				]
+			}
+
+			DEF Wire_base Transform {
+				translation	0.7 0 0
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0.0774029 0.00577069 0.53
+						    }
+
+					    }
+
+					    geometry	Box {
+						    size	0.4 2.05 1.2
+					    }
+
+				    }
+
+				    DEF Power_cable Transform {
+					    translation	0.3 -0.5 0
+					    rotation	0 0 1  1.5708
+					    children [ 
+						Shape {
+							appearance	Appearance {
+								material	Material {
+									diffuseColor	0.728093 0.73 0.696687
+								}
+
+							}
+
+							geometry	Cylinder {
+								height	0.5
+								radius	0.2
+								bottom	TRUE
+							}
+
+						}
+
+						Transform {
+							translation	0 -0.2 0
+							children Shape {
+								appearance	Appearance {
+									material	Material {
+									}
+
+								}
+
+								geometry	Cylinder {
+									height	0.5
+									radius	0.1
+									bottom	FALSE
+								}
+
+							}
+						}
+					    ]
+				    }
+				]
+			}
+		    ]
+	    }
+
+	    DEF x_axis Transform {
+		    translation	0 2.54 0
+		    rotation	0 0 1  1.5708
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+						diffuseColor	0.8 0.0136102 0.0760451
+					}
+
+				}
+
+				geometry	Cylinder {
+					height	15
+					radius	0.02
+				}
+
+			}
+
+			DEF x_arrow Transform {
+				translation	0 7.5 0
+				rotation	0 1 0  3.14159
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0.8 0.0957725 0.0645809
+						    }
+
+					    }
+
+					    geometry	Cone {
+						    bottomRadius	0.1
+						    height	0.4
+					    }
+
+				    }
+
+				    DEF letter_X_world Transform {
+					    translation	-0.15 -0.9 0
+					    rotation	0 0 1  1.5708
+					    scale	0.05 0.05 0.05
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+								    diffuseColor	1 0.183418 0.202909
+							    }
+
+						    }
+
+						    geometry	Text {
+							    string	"oX"
+						    }
+
+					    }
+				    }
+				]
+			}
+		    ]
+	    }
+
+	    DEF z_axis Transform {
+		    translation	0 0 0
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+						diffuseColor	0 0 0
+					}
+
+				}
+
+				geometry	Cylinder {
+					height	15
+					radius	0.02
+				}
+
+			}
+
+			DEF z_arrow Transform {
+				translation	0 7.5 0
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0.152758 0.0838624 0.8
+						    }
+
+					    }
+
+					    geometry	Cone {
+						    bottomRadius	0.1
+						    height	0.4
+					    }
+
+				    }
+
+				    DEF letter_Z_world Transform {
+					    translation	-0.7 0 0
+					    scale	0.06 0.06 0.06
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+								    diffuseColor	0.0095531 0.118768 0.8
+							    }
+
+						    }
+
+						    geometry	Text {
+							    string	"Zo"
+						    }
+
+					    }
+				    }
+				]
+			}
+		    ]
+	    }
+
+	    DEF y_axis Transform {
+		    translation	0 2.54 0
+		    rotation	1 0 0  1.5708
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+						ambientIntensity	0.2
+						diffuseColor	0.055084 0.93 0.209671
+					}
+
+				}
+
+				geometry	Cylinder {
+					height	15
+					radius	0.02
+				}
+
+			}
+
+			DEF y_arrow Transform {
+				translation	0 7.5 0
+				rotation	0 1 0  3.14159
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0.0389315 0.8 0.107362
+						    }
+
+					    }
+
+					    geometry	Cone {
+						    bottomRadius	0.1
+						    height	0.4
+					    }
+
+				    }
+
+				    DEF letter_Y_world Transform {
+					    translation	-0.1 -0.4 0.2
+					    rotation	1 0 0  1.5708
+					    scale	0.05 0.05 0.05
+					    children Shape {
+						    appearance	Appearance {
+							    material	Material {
+								    diffuseColor	0.0129599 0.87 0.155194
+							    }
+
+						    }
+
+						    geometry	Text {
+							    string	"oY"
+						    }
+
+					    }
+				    }
+				]
+			}
+		    ]
+	    }
+
+	    DEF grw Transform {
+		    translation	0 -200 -3
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+					}
+
+				}
+
+				geometry	Sphere {
+					radius	0.02
+				}
+
+			}
+
+			DEF horizontal-x Transform {
+				translation	-1.5 0 0
+				rotation	0 0 1  1.5708
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0.2 0.4 0.7
+						    }
+
+					    }
+
+					    geometry	Cylinder {
+						    height	3
+						    radius	0.02
+					    }
+
+				    }
+
+				    DEF horizontal1 Transform {
+					    translation	-1.19259e-007 -1.40667e-005 1
+					    children [ 
+						Shape {
+							appearance	Appearance {
+								material	Material {
+									diffuseColor	0.2 0.4 0.7
+								}
+
+							}
+
+							geometry	Cylinder {
+								height	3
+								radius	0.02
+							}
+
+						}
+
+						DEF horizontal2 Transform {
+							translation	0 0 1
+							children [ 
+							    Shape {
+								    appearance	Appearance {
+									    material	Material {
+										    diffuseColor	0.2 0.4 0.7
+									    }
+
+								    }
+
+								    geometry	Cylinder {
+									    height	3
+									    radius	0.02
+								    }
+
+							    }
+
+							    DEF horizontal3 Transform {
+								    translation	0 0 1
+								    children [ 
+									Shape {
+										appearance	Appearance {
+											material	Material {
+												diffuseColor	0.2 0.4 0.7
+											}
+
+										}
+
+										geometry	Cylinder {
+											height	3
+											radius	0.02
+										}
+
+									}
+
+									DEF horizontal4 Transform {
+										translation	0 0 1
+										children [ 
+										    Shape {
+											    appearance	Appearance {
+												    material	Material {
+													    diffuseColor	0.2 0.4 0.7
+												    }
+
+											    }
+
+											    geometry	Cylinder {
+												    height	3
+												    radius	0.02
+											    }
+
+										    }
+
+										    DEF horizontal5 Transform {
+											    translation	0 0 1
+											    children [ 
+												Shape {
+													appearance	Appearance {
+														material	Material {
+															diffuseColor	0.2 0.4 0.7
+														}
+
+													}
+
+													geometry	Cylinder {
+														height	3
+														radius	0.02
+													}
+
+												}
+
+												DEF horizontal6 Transform {
+													translation	0 0 1
+													children Shape {
+														appearance	Appearance {
+															material	Material {
+																diffuseColor	0.2 0.4 0.7
+															}
+
+														}
+
+														geometry	Cylinder {
+															height	3
+															radius	0.02
+														}
+
+													}
+												}
+											    ]
+										    }
+										]
+									}
+								    ]
+							    }
+							]
+						}
+
+						DEF horizontalv1 Transform {
+							translation	0 2 -1
+							children [ 
+							    Shape {
+								    appearance	Appearance {
+									    material	Material {
+										    diffuseColor	0.2 0.4 0.7
+									    }
+
+								    }
+
+								    geometry	Cylinder {
+									    height	1
+									    radius	0.02
+								    }
+
+							    }
+
+							    DEF horizontalv2 Transform {
+								    translation	0 0 1
+								    children [ 
+									Shape {
+										appearance	Appearance {
+											material	Material {
+												diffuseColor	0.2 0.4 0.7
+											}
+
+										}
+
+										geometry	Cylinder {
+											height	1
+											radius	0.02
+										}
+
+									}
+
+									DEF horizontalv3 Transform {
+										translation	0 0 1
+										children [ 
+										    Shape {
+											    appearance	Appearance {
+												    material	Material {
+													    diffuseColor	0.2 0.4 0.7
+												    }
+
+											    }
+
+											    geometry	Cylinder {
+												    height	1
+												    radius	0.02
+											    }
+
+										    }
+
+										    DEF horizontalv4 Transform {
+											    translation	0 0 1
+											    children [ 
+												Shape {
+													appearance	Appearance {
+														material	Material {
+															diffuseColor	0.2 0.4 0.7
+														}
+
+													}
+
+													geometry	Cylinder {
+														height	1
+														radius	0.02
+													}
+
+												}
+
+												DEF horizontalv5 Transform {
+													translation	0 0 1
+													children [ 
+													    Shape {
+														    appearance	Appearance {
+															    material	Material {
+																    diffuseColor	0.2 0.4 0.7
+															    }
+
+														    }
+
+														    geometry	Cylinder {
+															    height	1
+															    radius	0.02
+														    }
+
+													    }
+
+													    DEF horizontalv6 Transform {
+														    translation	0 0 1
+														    children [ 
+															Shape {
+																appearance	Appearance {
+																	material	Material {
+																		diffuseColor	0.2 0.4 0.7
+																	}
+
+																}
+
+																geometry	Cylinder {
+																	height	1
+																	radius	0.02
+																}
+
+															}
+
+															DEF horizontalv7 Transform {
+																translation	0 0 1
+																children Shape {
+																	appearance	Appearance {
+																		material	Material {
+																			diffuseColor	0.2 0.4 0.7
+																		}
+
+																	}
+
+																	geometry	Cylinder {
+																		height	1
+																		radius	0.02
+																	}
+
+																}
+															}
+														    ]
+													    }
+													]
+												}
+											    ]
+										    }
+										]
+									}
+								    ]
+							    }
+							]
+						}
+					    ]
+				    }
+				]
+			}
+
+			DEF vertical-y Transform {
+				translation	0 0 3
+				rotation	1 0 0  1.5708
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    diffuseColor	0.2 0.4 0.7
+						    }
+
+					    }
+
+					    geometry	Cylinder {
+						    height	6
+						    radius	0.02
+					    }
+
+				    }
+
+				    DEF vertical1 Transform {
+					    translation	-1 0 0
+					    children [ 
+						Shape {
+							appearance	Appearance {
+								material	Material {
+									diffuseColor	0.2 0.4 0.7
+								}
+
+							}
+
+							geometry	Cylinder {
+								height	6
+								radius	0.02
+							}
+
+						}
+
+						DEF vertical2 Transform {
+							translation	-1 0 0
+							children [ 
+							    Shape {
+								    appearance	Appearance {
+									    material	Material {
+										    diffuseColor	0.2 0.4 0.7
+									    }
+
+								    }
+
+								    geometry	Cylinder {
+									    height	6
+									    radius	0.02
+								    }
+
+							    }
+
+							    DEF vertical3 Transform {
+								    translation	-1 0 0
+								    children [ 
+									Shape {
+										appearance	Appearance {
+											material	Material {
+												diffuseColor	0.2 0.4 0.7
+											}
+
+										}
+
+										geometry	Cylinder {
+											height	6
+											radius	0.02
+										}
+
+									}
+
+									DEF vertical4 Transform {
+										translation	-1 0 0
+										children Shape {
+											appearance	Appearance {
+												material	Material {
+													diffuseColor	0.2 0.4 0.7
+												}
+
+											}
+
+											geometry	Cylinder {
+												height	6
+												radius	0.02
+											}
+
+										}
+									}
+								    ]
+							    }
+							]
+						}
+					    ]
+				    }
+				]
+			}
+		    ]
+	    }
+	]
+}
+DEF Viewpoint_far Viewpoint {
+	orientation	0 1 0  0.00878907
+	position	0.898946 6.208 24.7962
+	description	"Far"
+}
+DEF Viewpoint_Close Viewpoint {
+	position	-0.9068 2.6 12.3124
+	description	"Close"
+}
